@@ -1736,8 +1736,7 @@ var ApiService = (function () {
     ApiService.prototype.selectZone = function (zone) {
         //method which selects particular zone
         //Select the zone and populate the source drop down
-        var params = new __WEBPACK_IMPORTED_MODULE_2__angular_common_http__["c" /* HttpParams */]().set('bucket_name', zone);
-        return this.http.get('/v1/s3/listdatabase', { params: params });
+        return this.http.get("/v1/s3/listdatabase?bucket_name=" + zone);
     };
     ApiService.prototype.selectSource = function (source, zone) {
         //method which selects particular source

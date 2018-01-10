@@ -3,3 +3,5 @@ xstatic/
 .vscode/
 run.pyc
 run.py
+demo.py
+demo.pyc
