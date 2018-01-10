@@ -887,11 +887,7 @@ var FingerprintComponent = (function () {
             _this.sources = sources;
             console.log(sources);
             console.log(typeof (sources));
-            var x = Object.values(sources);
-            console.log(x);
-            for (var i = 0; i < x.length; i++) {
-                _this.sourceNames[i] = x[i];
-            }
+            _this.sourceNames = sources["databases"];
         });
     };
     FingerprintComponent.prototype.selectSource = function (sourceName) {
