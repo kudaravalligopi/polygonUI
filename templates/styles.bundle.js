@@ -60,6 +60,7 @@ if(false) {
 exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
 // imports
 exports.push([module.i, "@import url(https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900);", ""]);
+exports.push([module.i, "@import url(https://fonts.googleapis.com/icon?family=Material+Icons);", ""]);
 
 // module
 exports.push([module.i, "/* You can add global styles to this file, and also import other style files */\nbody {\n  margin: 0;\n  padding: 0;\n  font-size: 14px;\n  height: 100%;\n  font-family: 'Roboto', sans-serif;\n  font-weight: 400; }\n\n.row {\n  margin-bottom: 1em; }\n\n.flex-container {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  -webkit-box-pack: center;\n      -ms-flex-pack: center;\n          justify-content: center;\n  height: 90vh; }\n\n.title {\n  text-align: center;\n  font-variant: small-caps; }\n\n.subtitle {\n  font-weight: normal;\n  text-align: center; }\n\n.block-margin {\n  display: block !important;\n  margin: 0 auto !important; }\n", ""]);

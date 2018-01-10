@@ -198,7 +198,7 @@ AppModule = __decorate([
             __WEBPACK_IMPORTED_MODULE_11__angular_http__["b" /* HttpModule */],
             __WEBPACK_IMPORTED_MODULE_10__angular_forms__["f" /* FormsModule */],
             __WEBPACK_IMPORTED_MODULE_10__angular_forms__["k" /* ReactiveFormsModule */],
-            __WEBPACK_IMPORTED_MODULE_12__angular_common_http__["a" /* HttpClientModule */],
+            __WEBPACK_IMPORTED_MODULE_12__angular_common_http__["b" /* HttpClientModule */],
             //Routings
             __WEBPACK_IMPORTED_MODULE_9__app_routes__["a" /* Routings */]
         ],
@@ -393,7 +393,7 @@ var _a;
 /***/ "../../../../../src/app/components/curate/curate.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"flex-container\">\n\t<div class=\"container\">\n\t\t<div class=\"row\">\n\t\t\t<div class=\"col-md-12\">\n\t\t\t\t<h2 class=\"title\">Curate</h2>\n\t\t\t\t<h5 class=\"subtitle\">Make curated tag entries into the ops_table and subsequently re-tag in Atlas.</h5>\n\t\t\t\t<health-check-non-prod></health-check-non-prod>\n\t\t\t</div>\n\t\t</div>\n\t\t<div class=\"row\">\n\t\t\t<section id=\"inputs\" class=\"col-mat-12\">\n\t\t\t\t<form [formGroup]=\"curateForm\" novalidate>\n\t\t\t\t\t<mat-form-field>\n\t\t\t\t\t\t<mat-select placeholder=\"Select Data Zone\" class=\"fingerprint-select\" autofocus formControlName=\"zoneName\">\n\t\t\t\t\t\t\t<mat-option *ngFor=\"let zone of zones\" [value]=\"zone.name \" (click)=\"selectZone(zone.name)\">{{zone.name}}</mat-option>\n\t\t\t\t\t\t</mat-select>\n\t\t\t\t\t</mat-form-field>\n\t\t\t\t\t<mat-form-field>\n\t\t\t\t\t\t<mat-select placeholder=\"Select DB/Source\" class=\"fingerprint-select\" formControlName=\"sourceName\">\n\t\t\t\t\t\t\t<mat-option *ngFor=\"let source of sourceNames\" [value]=\"source\" (click)=\"selectSource(source)\">{{source}}</mat-option>\n\t\t\t\t\t\t</mat-select>\n\t\t\t\t\t</mat-form-field>\n\t\t\t\t\t<mat-form-field>\n\t\t\t\t\t\t<mat-select placeholder=\"Select Data Table\" class=\"fingerprint-select\" formControlName=\"tableName\">\n\t\t\t\t\t\t\t<mat-option *ngFor=\"let table of tableNames\" [value]=\"table\" (click)=\"selectTable(table)\">{{table}}</mat-option>\n\t\t\t\t\t\t</mat-select>\n\t\t\t\t\t</mat-form-field>\n\t\t\t\t\t<mat-form-field>\n\t\t\t\t\t\t<mat-select placeholder=\"Select Data Column\" class=\"fingerprint-select\" formControlName=\"columnName\">\n\t\t\t\t\t\t\t<mat-option *ngFor=\"let column of columnNames\" [value]=\"column\" (click)=\"selectColumn(column)\">{{column}}</mat-option>\n\t\t\t\t\t\t</mat-select>\n\t\t\t\t\t</mat-form-field>\n\t\t\t\t\t<br>\n\t\t\t\t\t<div *ngIf=\"columnSelected\">\n\t\t\t\t\t\t<div formArrayName=\"tagInfo\">\n\t\t\t\t\t\t\t<div *ngFor=\"let tags of curateForm.controls.tagInfo.controls; let i = index\">\n\t\t\t\t\t\t\t\t<div [formGroupName]=\"i\">\n\t\t\t\t\t\t\t\t\t<div class=\"row\">\n\t\t\t\t\t\t\t\t\t\t<div class=\"col-sm-1\">\n\t\t\t\t\t\t\t\t\t\t\t<button mat-mini-fab color=\"accent\" (click)=\"addNewTag()\" style=\"color: white\" *ngIf=\"curateForm.controls.tagInfo.controls.length < 3\">\n\t\t\t\t\t\t\t\t\t\t\t\t<mat-icon>add</mat-icon>\n\t\t\t\t\t\t\t\t\t\t\t</button>\n\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div class=\"col-sm-1\">\n\t\t\t\t\t\t\t\t\t\t\t<button mat-mini-fab color=\"accent\" (click)=\"removeTag(i)\" *ngIf=\"curateForm.controls.tagInfo.controls.length > 1\" style=\"color: white\">\n\t\t\t\t\t\t\t\t\t\t\t\t<mat-icon>remove</mat-icon>\n\t\t\t\t\t\t\t\t\t\t\t</button>\n\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div class=\"col-sm-5\">\n\t\t\t\t\t\t\t\t\t\t\t<mat-form-field>\n\t\t\t\t\t\t\t\t\t\t\t\t<mat-select placeholder=\"Select Tag Type\" formControlName=\"tagType\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t<mat-option *ngFor=\"let tag of tagTypes\" [value]=\"tag\" (click)=\"selectTag(tag,i)\">{{tag}}</mat-option>\n\t\t\t\t\t\t\t\t\t\t\t\t</mat-select>\n\t\t\t\t\t\t\t\t\t\t\t</mat-form-field>\n\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div class=\"col-sm-5\">\n\t\t\t\t\t\t\t\t\t\t\t<!-- MIO -->\n\t\t\t\t\t\t\t\t\t\t\t<mat-form-field *ngIf=\"tagID == 'MIO'\">\n\t\t\t\t\t\t\t\t\t\t\t\t<mat-select placeholder=\"Select Tag Category\" formControlName=\"tagCategory\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t<mat-option *ngFor=\"let tagC of tagCategories[i]\" [value]=\"tagC\" (click)=\"selectTagCategory(tagC)\">{{tagC}}</mat-option>\n\t\t\t\t\t\t\t\t\t\t\t\t</mat-select>\n\t\t\t\t\t\t\t\t\t\t\t</mat-form-field>\n\t\t\t\t\t\t\t\t\t\t\t<mat-form-field *ngIf=\"tagID == 'SEC'\">\n\t\t\t\t\t\t\t\t\t\t\t\t<!-- SEC -->\n\t\t\t\t\t\t\t\t\t\t\t\t<mat-select placeholder=\"Select Tag Category\" formControlName=\"tagCategory\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t<mat-option *ngFor=\"let tagD of tagCategories[i]\" [value]=\"tagD\" (click)=\"selectTagCategory(tagD)\">{{tagD}}</mat-option>\n\t\t\t\t\t\t\t\t\t\t\t\t</mat-select>\n\t\t\t\t\t\t\t\t\t\t\t</mat-form-field>\n\n\t\t\t\t\t\t\t\t\t\t\t<!-- DOM -->\n\t\t\t\t\t\t\t\t\t\t\t<mat-form-field *ngIf=\"tagID == 'DOM'\">\n\t\t\t\t\t\t\t\t\t\t\t\t<mat-select placeholder=\"Select Tag Category\" formControlName=\"tagCategory\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t<mat-option *ngFor=\"let tagDOM of tagCategories[i]\" [value]=\"tagDOM\" (click)=\"selectTagCategory(tagDOM)\">{{tagDOM}}</mat-option>\n\t\t\t\t\t\t\t\t\t\t\t\t</mat-select>\n\t\t\t\t\t\t\t\t\t\t\t</mat-form-field>\n\t\t\t\t\t\t\t\t\t\t</div>\n\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</div>\n\n\t\t\t\t</form>\n\n\t\t\t</section>\n\t\t\t<!-- <pre>{{curateForm.value | json}}</pre> -->\n\t\t</div>\n\t\t<div class=\"row\" *ngIf=\"showProgressSpinner\">\n\t\t\t<div class=\"col-sm-12\">\n\t\t\t\t<mat-progress-spinner mode=\"indeterminate\" color=\"primary\" [strokeWidth]=\"5\" style=\"margin: 0 auto\"></mat-progress-spinner>\n\t\t\t</div>\n\t\t</div>\n\t\t<div class=\"row\">\n\t\t\t<section id=\"outputs\" class=\"col-mat-12\">\n\t\t\t\t<div id=\"buttonsOP\">\n\t\t\t\t\t<button mat-raised-button color=\"accent\" (click)=\"submitTag()\">Submit Tag Corrections</button>\n\t\t\t\t\t<button mat-raised-button color=\"accent\" disabled>Tag in Atlas</button>\n\t\t\t\t</div>\n\t\t\t</section>\n\t\t</div>\n\t</div>\n</div>"
+module.exports = "<div class=\"flex-container\">\n\t<div class=\"container\">\n\t\t<div class=\"row\">\n\t\t\t<div class=\"col-md-12\">\n\t\t\t\t<h2 class=\"title\">Curate</h2>\n\t\t\t\t<h5 class=\"subtitle\">Make curated tag entries into the ops_table and subsequently re-tag in Atlas.</h5>\n\t\t\t\t<health-check-non-prod></health-check-non-prod>\n\t\t\t</div>\n\t\t</div>\n\t\t<div class=\"row\">\n\t\t\t<section id=\"inputs\" class=\"col-mat-12\">\n\t\t\t\t<form [formGroup]=\"curateForm\" novalidate>\n\t\t\t\t\t<mat-form-field>\n\t\t\t\t\t\t<mat-select placeholder=\"Select Data Zone\" class=\"fingerprint-select\" autofocus formControlName=\"zoneName\">\n\t\t\t\t\t\t\t<mat-option *ngFor=\"let zone of zones\" [value]=\"zone \" (click)=\"selectZone(zone)\">{{zone}}</mat-option>\n\t\t\t\t\t\t</mat-select>\n\t\t\t\t\t</mat-form-field>\n\t\t\t\t\t<mat-form-field>\n\t\t\t\t\t\t<mat-select placeholder=\"Select DB/Source\" class=\"fingerprint-select\" formControlName=\"sourceName\">\n\t\t\t\t\t\t\t<mat-option *ngFor=\"let source of sourceNames\" [value]=\"source\" (click)=\"selectSource(source)\">{{source}}</mat-option>\n\t\t\t\t\t\t</mat-select>\n\t\t\t\t\t</mat-form-field>\n\t\t\t\t\t<mat-form-field>\n\t\t\t\t\t\t<mat-select placeholder=\"Select Data Table\" class=\"fingerprint-select\" formControlName=\"tableName\">\n\t\t\t\t\t\t\t<mat-option *ngFor=\"let table of tableNames\" [value]=\"table\" (click)=\"selectTable(table)\">{{table}}</mat-option>\n\t\t\t\t\t\t</mat-select>\n\t\t\t\t\t</mat-form-field>\n\t\t\t\t\t<mat-form-field>\n\t\t\t\t\t\t<mat-select placeholder=\"Select Data Column\" class=\"fingerprint-select\" formControlName=\"columnName\">\n\t\t\t\t\t\t\t<mat-option *ngFor=\"let column of columnNames\" [value]=\"column\" (click)=\"selectColumn(column)\">{{column}}</mat-option>\n\t\t\t\t\t\t</mat-select>\n\t\t\t\t\t</mat-form-field>\n\t\t\t\t\t<br>\n\t\t\t\t\t<div *ngIf=\"columnSelected\">\n\t\t\t\t\t\t<div formArrayName=\"tagInfo\">\n\t\t\t\t\t\t\t<div *ngFor=\"let tags of curateForm.controls.tagInfo.controls; let i = index\">\n\t\t\t\t\t\t\t\t<div [formGroupName]=\"i\">\n\t\t\t\t\t\t\t\t\t<div class=\"row\">\n\t\t\t\t\t\t\t\t\t\t<div class=\"col-sm-1\">\n\t\t\t\t\t\t\t\t\t\t\t<button mat-mini-fab color=\"accent\" (click)=\"addNewTag()\" style=\"color: white\" *ngIf=\"curateForm.controls.tagInfo.controls.length < 3\">\n\t\t\t\t\t\t\t\t\t\t\t\t<mat-icon>add</mat-icon>\n\t\t\t\t\t\t\t\t\t\t\t</button>\n\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div class=\"col-sm-1\">\n\t\t\t\t\t\t\t\t\t\t\t<button mat-mini-fab color=\"accent\" (click)=\"removeTag(i)\" *ngIf=\"curateForm.controls.tagInfo.controls.length > 1\" style=\"color: white\">\n\t\t\t\t\t\t\t\t\t\t\t\t<mat-icon>remove</mat-icon>\n\t\t\t\t\t\t\t\t\t\t\t</button>\n\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div class=\"col-sm-5\">\n\t\t\t\t\t\t\t\t\t\t\t<mat-form-field>\n\t\t\t\t\t\t\t\t\t\t\t\t<mat-select placeholder=\"Select Tag Type\" formControlName=\"tagType\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t<mat-option *ngFor=\"let tag of tagTypes\" [value]=\"tag\" (click)=\"selectTag(tag,i)\">{{tag}}</mat-option>\n\t\t\t\t\t\t\t\t\t\t\t\t</mat-select>\n\t\t\t\t\t\t\t\t\t\t\t</mat-form-field>\n\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div class=\"col-sm-5\">\n\t\t\t\t\t\t\t\t\t\t\t<!-- MIO -->\n\t\t\t\t\t\t\t\t\t\t\t<mat-form-field *ngIf=\"tagID == 'MIO'\">\n\t\t\t\t\t\t\t\t\t\t\t\t<mat-select placeholder=\"Select Tag Category\" formControlName=\"tagCategory\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t<mat-option *ngFor=\"let tagC of tagCategories[i]\" [value]=\"tagC\" (click)=\"selectTagCategory(tagC)\">{{tagC}}</mat-option>\n\t\t\t\t\t\t\t\t\t\t\t\t</mat-select>\n\t\t\t\t\t\t\t\t\t\t\t</mat-form-field>\n\t\t\t\t\t\t\t\t\t\t\t<mat-form-field *ngIf=\"tagID == 'SEC'\">\n\t\t\t\t\t\t\t\t\t\t\t\t<!-- SEC -->\n\t\t\t\t\t\t\t\t\t\t\t\t<mat-select placeholder=\"Select Tag Category\" formControlName=\"tagCategory\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t<mat-option *ngFor=\"let tagD of tagCategories[i]\" [value]=\"tagD\" (click)=\"selectTagCategory(tagD)\">{{tagD}}</mat-option>\n\t\t\t\t\t\t\t\t\t\t\t\t</mat-select>\n\t\t\t\t\t\t\t\t\t\t\t</mat-form-field>\n\n\t\t\t\t\t\t\t\t\t\t\t<!-- DOM -->\n\t\t\t\t\t\t\t\t\t\t\t<mat-form-field *ngIf=\"tagID == 'DOM'\">\n\t\t\t\t\t\t\t\t\t\t\t\t<mat-select placeholder=\"Select Tag Category\" formControlName=\"tagCategory\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t<mat-option *ngFor=\"let tagDOM of tagCategories[i]\" [value]=\"tagDOM\" (click)=\"selectTagCategory(tagDOM)\">{{tagDOM}}</mat-option>\n\t\t\t\t\t\t\t\t\t\t\t\t</mat-select>\n\t\t\t\t\t\t\t\t\t\t\t</mat-form-field>\n\t\t\t\t\t\t\t\t\t\t</div>\n\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</div>\n\n\t\t\t\t</form>\n\n\t\t\t</section>\n\t\t\t<!-- <pre>{{curateForm.value | json}}</pre> -->\n\t\t</div>\n\t\t<div class=\"row\" *ngIf=\"showProgressSpinner\">\n\t\t\t<div class=\"col-sm-12\">\n\t\t\t\t<mat-progress-spinner mode=\"indeterminate\" color=\"primary\" [strokeWidth]=\"5\" style=\"margin: 0 auto\"></mat-progress-spinner>\n\t\t\t</div>\n\t\t</div>\n\t\t<div class=\"row\">\n\t\t\t<section id=\"outputs\" class=\"col-mat-12\">\n\t\t\t\t<div id=\"buttonsOP\">\n\t\t\t\t\t<button mat-raised-button color=\"accent\" (click)=\"submitTag()\">Submit Tag Corrections</button>\n\t\t\t\t\t<button mat-raised-button color=\"accent\" disabled>Tag in Atlas</button>\n\t\t\t\t</div>\n\t\t\t</section>\n\t\t</div>\n\t</div>\n</div>"
 
 /***/ }),
 
@@ -505,12 +505,7 @@ var CurateComponent = (function () {
     };
     //to get all zones on initialize of component
     CurateComponent.prototype.getZones = function () {
-        var _this = this;
-        this.curateService
-            .getAllZones()
-            .subscribe(function (zones) {
-            _this.zones = zones;
-        });
+        this.zones = this.api.getZones();
     };
     CurateComponent.prototype.createForm = function () {
         this.curateForm = new __WEBPACK_IMPORTED_MODULE_4__angular_forms__["d" /* FormGroup */]({
@@ -548,7 +543,7 @@ var CurateComponent = (function () {
         var _this = this;
         this.sourceNames = [];
         this.selectedZone = zoneName;
-        this.curateService
+        this.api
             .selectZone(this.selectedZone)
             .subscribe(function (sources) {
             _this.sources = sources;
@@ -723,18 +718,13 @@ var FingerprintOnDemandComponent = (function () {
     //Populate Selects
     //to get all zones on initialize of component
     FingerprintOnDemandComponent.prototype.getZones = function () {
-        var _this = this;
-        this.fingerprintService
-            .getAllZones()
-            .subscribe(function (zones) {
-            _this.zones = zones;
-        });
+        this.zones = this.api.getZones();
     };
     FingerprintOnDemandComponent.prototype.selectZone = function (zoneName) {
         var _this = this;
         this.sourceNames = [];
         this.selectedZone = zoneName;
-        this.fingerprintService
+        this.api
             .selectZone(this.selectedZone)
             .subscribe(function (sources) {
             _this.sources = sources;
@@ -805,7 +795,7 @@ var _a, _b;
 /***/ "../../../../../src/app/components/fingerprint/fingerprint.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"flex-container\">\n  <div class=\"container\">\n    <div class=\"row\">\n      <div class=\"col-md-12\">\n        <h2 class=\"title\">Interactive Fingerprinting</h2>\n        <h5 class=\"subtitle\">Invoke serverless ML models to generate and inspect tag predictions for the attributes of your choice.\n        </h5>\n        <health-check-non-prod></health-check-non-prod>\n      </div>\n    </div>\n    <div class=\"row\">\n      <section id=\"inputs\" class=\"col-mat-12\">\n        <form [formGroup]=\"fingerprintForm\" novalidate (ngSubmit)=\"fingerprint()\">\n          <mat-form-field>\n            <mat-select placeholder=\"Select Data Zone\" class=\"fingerprint-select\" autofocus formControlName=\"zoneName\">\n              <mat-option *ngFor=\"let zone of zones\" [value]=\"zone.id \" (click)=\"selectZone(zone.name)\">{{zone.name}}</mat-option>\n            </mat-select>\n          </mat-form-field>\n          <mat-form-field>\n            <mat-select placeholder=\"Select DB/Source\" class=\"fingerprint-select\" formControlName=\"sourceName\">\n              <mat-option *ngFor=\"let source of sourceNames\" [value]=\"source\" (click)=\"selectSource(source)\">{{source}}</mat-option>\n            </mat-select>\n          </mat-form-field>\n          <mat-form-field>\n            <mat-select placeholder=\"Select Data Table\" class=\"fingerprint-select\" formControlName=\"tableName\">\n              <mat-option *ngFor=\"let table of tableNames\" [value]=\"table\" (click)=\"selectTable(table)\">{{table}}</mat-option>\n            </mat-select>\n          </mat-form-field>\n          <mat-form-field>\n            <mat-select placeholder=\"Select Data Columns\" class=\"fingerprint-select\" multiple formControlName=\"columnName\">\n              <!-- (click)=\"selectColumn(column)\" -->\n              <mat-option *ngFor=\"let column of columnNames\" [value]=\"column\">{{column}}</mat-option>\n            </mat-select>\n          </mat-form-field>\n          <br>\n          <button mat-raised-button color=\"accent\" type=\"submit\" [ngStyle]=\"{'pointer-events':showProgressSpinner ? 'none' : 'auto'}\"\n            [disabled]=\"fingerprintForm.invalid\">Fingerprint Data</button>\n        </form>\n      </section>\n    </div>\n    <div class=\"row\" *ngIf=\"showProgressSpinner\">\n      <div class=\"col-sm-12\">\n        <mat-progress-spinner mode=\"indeterminate\" color=\"primary\" [strokeWidth]=\"5\" style=\"margin: 0 auto\"></mat-progress-spinner>\n      </div>\n    </div>\n    <div class=\"row\" *ngIf=\"fingerprintDataAcquired\">\n      <section id=\"outputs\" class=\"col-mat-12\">\n        <div id=\"outputBox\">\n          <pre class=\"opBox\">{{fingerprintData | json}}</pre>\n        </div>\n\n        <div id=\"buttonsOP\">\n          <button mat-raised-button color=\"accent\" (click)=\"reset()\">Reset</button>\n          <button mat-raised-button color=\"accent\">Export</button>\n        </div>\n      </section>\n    </div>\n  </div>\n</div>"
+module.exports = "<div class=\"flex-container\">\n  <div class=\"container\">\n    <div class=\"row\">\n      <div class=\"col-md-12\">\n        <h2 class=\"title\">Interactive Fingerprinting</h2>\n        <h5 class=\"subtitle\">Invoke serverless ML models to generate and inspect tag predictions for the attributes of your choice.\n        </h5>\n        <health-check-non-prod></health-check-non-prod>\n      </div>\n    </div>\n    <div class=\"row\">\n      <section id=\"inputs\" class=\"col-mat-12\">\n        <form [formGroup]=\"fingerprintForm\" novalidate (ngSubmit)=\"fingerprint()\">\n          <mat-form-field>\n            <mat-select placeholder=\"Select Data Zone\" class=\"fingerprint-select\" autofocus formControlName=\"zoneName\">\n              <mat-option *ngFor=\"let zone of zones\" [value]=\"zone\" (click)=\"selectZone(zone)\">{{zone}}</mat-option>\n            </mat-select>\n          </mat-form-field>\n          <mat-form-field>\n            <mat-select placeholder=\"Select DB/Source\" class=\"fingerprint-select\" formControlName=\"sourceName\">\n              <mat-option *ngFor=\"let source of sourceNames\" [value]=\"source\" (click)=\"selectSource(source)\">{{source}}</mat-option>\n            </mat-select>\n          </mat-form-field>\n          <mat-form-field>\n            <mat-select placeholder=\"Select Data Table\" class=\"fingerprint-select\" formControlName=\"tableName\">\n              <mat-option *ngFor=\"let table of tableNames\" [value]=\"table\" (click)=\"selectTable(table)\">{{table}}</mat-option>\n            </mat-select>\n          </mat-form-field>\n          <mat-form-field>\n            <mat-select placeholder=\"Select Data Columns\" class=\"fingerprint-select\" multiple formControlName=\"columnName\">\n              <!-- (click)=\"selectColumn(column)\" -->\n              <mat-option *ngFor=\"let column of columnNames\" [value]=\"column\">{{column}}</mat-option>\n            </mat-select>\n          </mat-form-field>\n          <br>\n          <button mat-raised-button color=\"accent\" type=\"submit\" [ngStyle]=\"{'pointer-events':showProgressSpinner ? 'none' : 'auto'}\"\n            [disabled]=\"fingerprintForm.invalid\">Fingerprint Data</button>\n        </form>\n      </section>\n    </div>\n    <div class=\"row\" *ngIf=\"showProgressSpinner\">\n      <div class=\"col-sm-12\">\n        <mat-progress-spinner mode=\"indeterminate\" color=\"primary\" [strokeWidth]=\"5\" style=\"margin: 0 auto\"></mat-progress-spinner>\n      </div>\n    </div>\n    <div class=\"row\" *ngIf=\"fingerprintDataAcquired\">\n      <section id=\"outputs\" class=\"col-mat-12\">\n        <div id=\"outputBox\">\n          <pre class=\"opBox\">{{fingerprintData | json}}</pre>\n        </div>\n\n        <div id=\"buttonsOP\">\n          <button mat-raised-button color=\"accent\" (click)=\"reset()\">Reset</button>\n          <button mat-raised-button color=\"accent\">Export</button>\n        </div>\n      </section>\n    </div>\n  </div>\n</div>"
 
 /***/ }),
 
@@ -872,12 +862,7 @@ var FingerprintComponent = (function () {
     };
     //to get all zones on initialize of component
     FingerprintComponent.prototype.getZones = function () {
-        var _this = this;
-        this.fingerprintService
-            .getAllZones()
-            .subscribe(function (zones) {
-            _this.zones = zones;
-        });
+        this.zones = this.api.getZones();
     };
     FingerprintComponent.prototype.createFormControls = function () {
         this.zoneName = new __WEBPACK_IMPORTED_MODULE_4__angular_forms__["c" /* FormControl */]('', [__WEBPACK_IMPORTED_MODULE_4__angular_forms__["l" /* Validators */].required]);
@@ -897,8 +882,7 @@ var FingerprintComponent = (function () {
         var _this = this;
         this.sourceNames = [];
         this.selectedZone = zoneName;
-        this.fingerprintService
-            .selectZone(this.selectedZone)
+        this.api.selectZone(this.selectedZone)
             .subscribe(function (sources) {
             _this.sources = sources;
             console.log(sources);
@@ -915,7 +899,7 @@ var FingerprintComponent = (function () {
         console.log('Select Source clicked with source name as ' + sourceName);
         this.tableNames = [];
         this.selectedSource = sourceName;
-        this.fingerprintService
+        this.api
             .selectSource(this.selectedSource, this.selectedZone)
             .subscribe(function (tables) {
             _this.tables = tables;
@@ -934,7 +918,7 @@ var FingerprintComponent = (function () {
         console.log('Select Table clicked with table name as ' + tableName + ' & source name as ' + this.selectedSource + ' & zone name as ' + this.selectedZone);
         this.columnNames = [];
         this.selectedTable = tableName;
-        this.fingerprintService
+        this.api
             .selectTable(this.selectedTable, this.selectedSource, this.selectedZone)
             .subscribe(function (columns) {
             _this.columns = columns;
@@ -959,8 +943,9 @@ var FingerprintComponent = (function () {
         var tName = sendOP.tableName;
         var cName = sendOP.columnName;
         try {
-            this.fingerprintService.fingerprint(cName, tName, sName, zName).subscribe(function (data) {
-                _this.fingerprintData = JSON.parse(data);
+            this.api.fingerprint(cName, tName, sName, zName).subscribe(function (data) {
+                console.log(data);
+                _this.fingerprintData = data;
                 _this.showProgressSpinner = false;
                 _this.fingerprintDataAcquired = true;
             });
@@ -1703,24 +1688,6 @@ MaterialModule = __decorate([
 
 /***/ }),
 
-/***/ "../../../../../src/app/models/zones.ts":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Zones; });
-var Zones = (function () {
-    function Zones(values) {
-        if (values === void 0) { values = {}; }
-        this.name = '';
-        Object.assign(this, values);
-    }
-    return Zones;
-}());
-
-//# sourceMappingURL=zones.js.map
-
-/***/ }),
-
 /***/ "../../../../../src/app/services/api.service.ts":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -1728,9 +1695,9 @@ var Zones = (function () {
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ApiService; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__("../../../http/@angular/http.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_Observable__ = __webpack_require__("../../../../rxjs/Observable.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_Observable___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_rxjs_Observable__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__models_zones__ = __webpack_require__("../../../../../src/app/models/zones.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_common_http__ = __webpack_require__("../../../common/@angular/common/http.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_Observable__ = __webpack_require__("../../../../rxjs/Observable.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_Observable___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_rxjs_Observable__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_map__ = __webpack_require__("../../../../rxjs/add/operator/map.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_map__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_rxjs_add_operator_catch__ = __webpack_require__("../../../../rxjs/add/operator/catch.js");
@@ -1755,82 +1722,45 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 var API_URL = '/';
 var ApiService = (function () {
-    function ApiService(http) {
+    function ApiService(http, httpC) {
         this.http = http;
+        this.httpC = httpC;
     }
     ApiService.prototype.getZones = function () {
         //method to get all zones
-        return this.http
-            .get('http://10.224.69.47:3000/fingerprint/zones')
-            .map(function (response) {
-            var zones = response.json();
-            return zones.map(function (zones) { return new __WEBPACK_IMPORTED_MODULE_3__models_zones__["a" /* Zones */](zones); });
-        })
-            .catch(this.handleError);
+        // return this.httpC.get('http://10.224.69.47:3000/fingerprint/zones')
+        //   .catch(this.handleError)
+        var prod = ["lmb-datalake-hdp-store-raw-nonprod", "lmb-datalake-hdp-store-raw-prod", "lmb-datalake-hdp-store-raw-prod-stage"];
+        return prod;
     };
     ApiService.prototype.selectZone = function (zone) {
         //method which selects particular zone
         //Select the zone and populate the source drop down
-        var zoneObj = {
-            zoneName: zone
-        };
-        return this.http
-            .post('http://10.224.69.47:3000/fingerprint/sources', zoneObj)
-            .map(function (response) {
-            var sources = response.json();
-            console.log('sources from API');
-            console.log(sources);
-            console.log(sources.databases);
-            return sources.databases;
-        });
+        var params = new __WEBPACK_IMPORTED_MODULE_2__angular_common_http__["c" /* HttpParams */]().set('bucket_name', zone);
+        return this.http.get('http://10.224.69.47:9090/v1/s3/listdatabase', { params: params });
     };
     ApiService.prototype.selectSource = function (source, zone) {
         //method which selects particular source
-        //Select the source and populate the tables drop down
-        var sourceObj = {
-            sourceName: source,
-            zoneName: zone
-        };
-        return this.http
-            .post('http://10.224.69.47:3000/fingerprint/tables', sourceObj)
-            .map(function (response) {
-            var tables = response.json();
-            console.log('tables from API ');
-            console.log(tables);
-            console.log(tables.tables);
-            return tables.tables;
-        });
+        var params = new __WEBPACK_IMPORTED_MODULE_2__angular_common_http__["c" /* HttpParams */]().set('bucket_name', zone);
+        params.append('database_name', source);
+        return this.httpC.get('http://10.224.69.47:9090/v1/s3/listtables', { params: params });
     };
     ApiService.prototype.selectTable = function (table, source, zone) {
         //method which selects particular table
         //Select the table and populate the columns drop down
-        var tableObj = {
-            tableName: table,
-            sourceName: source,
-            zoneName: zone
-        };
-        return this.http
-            .post('http://10.224.69.47:3000/fingerprint/columns', tableObj)
-            .map(function (response) {
-            var columns = response.json();
-            console.log('columns from API ');
-            console.log(columns);
-            console.log(columns.columns);
-            return columns.columns;
-        });
-    };
-    ApiService.prototype.selectColumn = function (column) {
-        //method which selects particular column
+        var params = new __WEBPACK_IMPORTED_MODULE_2__angular_common_http__["c" /* HttpParams */]().set('bucket_name', zone);
+        params.append('database_name', source);
+        params.append('table_name', table);
+        return this.httpC.get('"http://10.224.69.47:9090/v1/s3/rawzone/listcolumns', { params: params });
     };
     ApiService.prototype.fingerprint = function (column, table, source, zone) {
         console.log("\n    Column Name : " + column + "\n    Table Name : " + table + "\n    Source Name : " + source + "\n    Zone Name : " + zone + "\n    ");
+        var columns = [];
+        for (var i = 0; i < column.length; i++) {
+            column[i] = "\"" + column[i] + "\"";
+        }
         try {
-            return this.http
-                .post('http://10.224.69.47:3000/fingerprint/final', { zoneName: zone, sourceName: source, tableName: table, columnName: column })
-                .map(function (data) {
-                console.log(data);
-                return data.json();
-            });
+            return this.httpC.post('http://10.224.69.47:9090/v1/autotagging/submit', { "data": { "table_name": table, "database_name": source, "bucket_name": zone, "type": "raw", "colums": [columns] } });
         }
         catch (err) {
             console.log(err);
@@ -1839,7 +1769,7 @@ var ApiService = (function () {
     };
     ApiService.prototype.handleError = function (error) {
         console.error(error);
-        return __WEBPACK_IMPORTED_MODULE_2_rxjs_Observable__["Observable"].throw(error);
+        return __WEBPACK_IMPORTED_MODULE_3_rxjs_Observable__["Observable"].throw(error);
     };
     //curate
     ApiService.prototype.submitTagCorrections = function (params) {
@@ -1874,10 +1804,10 @@ var ApiService = (function () {
 }());
 ApiService = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["C" /* Injectable */])(),
-    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_http__["a" /* Http */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_http__["a" /* Http */]) === "function" && _a || Object])
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_http__["a" /* Http */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_http__["a" /* Http */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__angular_common_http__["a" /* HttpClient */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__angular_common_http__["a" /* HttpClient */]) === "function" && _b || Object])
 ], ApiService);
 
-var _a;
+var _a, _b;
 //# sourceMappingURL=api.service.js.map
 
 /***/ }),
@@ -1904,12 +1834,12 @@ var CurateService = (function () {
     function CurateService(api) {
         this.api = api;
     }
-    CurateService.prototype.getAllZones = function () {
-        return this.api.getZones();
-    };
-    CurateService.prototype.selectZone = function (zoneName) {
-        return this.api.selectZone(zoneName);
-    };
+    // getAllZones():Observable<Zones[]>{
+    //   return this.api.getZones()
+    // }
+    // selectZone(zoneName: string):Observable<Sources>{
+    //   return this.api.selectZone(zoneName)
+    // }
     CurateService.prototype.selectSource = function (sourceName, zoneName) {
         return this.api.selectSource(sourceName, zoneName);
     };
@@ -1953,12 +1883,12 @@ var FingerprintService = (function () {
     function FingerprintService(api) {
         this.api = api;
     }
-    FingerprintService.prototype.getAllZones = function () {
-        return this.api.getZones();
-    };
-    FingerprintService.prototype.selectZone = function (zoneName) {
-        return this.api.selectZone(zoneName);
-    };
+    // getAllZones():Observable<Zones[]>{
+    //   // return this.api.getZones()
+    // }
+    // selectZone(zoneName: string):Observable<Sources>{
+    //   return this.api.selectZone(zoneName)
+    // }
     FingerprintService.prototype.selectSource = function (sourceName, zoneName) {
         return this.api.selectSource(sourceName, zoneName);
     };
