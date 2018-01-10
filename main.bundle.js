@@ -1744,6 +1744,7 @@ var ApiService = (function () {
         }
         console.log("Column names in API END POINT Front End");
         var x = columns.toString();
+        console.log(x);
         try {
             return this.httpC.post('/v1/autotagging/submit', { "data": { "table_name": table, "database_name": source, "bucket_name": zone, "type": "raw", "colums": "[" + x + "]" } });
         }
