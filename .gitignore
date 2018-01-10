@@ -1,0 +1,5 @@
+venv/
+xstatic/
+.vscode/
+run.pyc
+run.py
