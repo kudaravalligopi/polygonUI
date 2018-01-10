@@ -1736,13 +1736,11 @@ var ApiService = (function () {
     ApiService.prototype.selectZone = function (zone) {
         //method which selects particular zone
         //Select the zone and populate the source drop down
-        return this.http.get("/v1/s3/listdatabase?bucket_name=" + zone);
+        return this.httpC.get("/v1/s3/listdatabase?bucket_name=" + zone);
     };
     ApiService.prototype.selectSource = function (source, zone) {
         //method which selects particular source
-        var params = new __WEBPACK_IMPORTED_MODULE_2__angular_common_http__["c" /* HttpParams */]().set('bucket_name', zone);
-        params.append('database_name', source);
-        return this.httpC.get('/v1/s3/listtables', { params: params });
+        return this.httpC.get('/v1/s3/listtables?bucket_name=${zone}&database_name=${source}');
     };
     ApiService.prototype.selectTable = function (table, source, zone) {
         //method which selects particular table
