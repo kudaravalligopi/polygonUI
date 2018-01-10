@@ -541,12 +541,8 @@ var CurateComponent = (function () {
             .subscribe(function (sources) {
             _this.sources = sources;
             console.log(sources);
-            console.log(typeof (sources));
-            var x = Object.values(sources);
-            console.log(x);
-            for (var i = 0; i < x.length; i++) {
-                _this.sourceNames[i] = x[i];
-            }
+            _this.sourceNames = sources["databases"];
+            console.log(_this.sourceNames);
         });
     };
     CurateComponent.prototype.selectSource = function (sourceName) {
@@ -560,11 +556,9 @@ var CurateComponent = (function () {
             _this.tables = tables;
             console.log(tables);
             console.log(typeof (tables));
-            var x = Object.values(tables);
-            console.log(x);
-            for (var i = 0; i < x.length; i++) {
-                _this.tableNames[i] = x[i];
-            }
+            _this.tableNames = tables["tables"];
+            console.log(_this.tableNames);
+            _this.tableNames.sort();
         });
     };
     CurateComponent.prototype.selectTable = function (tableName) {
@@ -578,11 +572,8 @@ var CurateComponent = (function () {
             _this.columns = columns;
             console.log(columns);
             console.log(typeof (columns));
-            var x = Object.values(columns);
-            console.log(x);
-            for (var i = 0; i < x.length; i++) {
-                _this.columnNames[i] = x[i];
-            }
+            _this.columnNames = columns["columns"];
+            console.log(_this.columnNames);
             _this.columnNames.sort();
         });
     };
