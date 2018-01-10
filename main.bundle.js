@@ -1737,7 +1737,7 @@ var ApiService = (function () {
         //method which selects particular zone
         //Select the zone and populate the source drop down
         console.log(zone);
-        return this.httpC.get("/v1/s3/listdatabase");
+        return this.httpC.get("/v1/s3/listdatabase?bucket_name=" + zone);
     };
     ApiService.prototype.selectSource = function (source, zone) {
         //method which selects particular source
