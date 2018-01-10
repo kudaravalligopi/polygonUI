@@ -886,8 +886,8 @@ var FingerprintComponent = (function () {
             .subscribe(function (sources) {
             _this.sources = sources;
             console.log(sources);
-            console.log(typeof (sources));
             _this.sourceNames = sources["databases"];
+            console.log(_this.sourceNames);
         });
     };
     FingerprintComponent.prototype.selectSource = function (sourceName) {
