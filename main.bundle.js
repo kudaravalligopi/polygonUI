@@ -1365,7 +1365,7 @@ OutputCurateComponent = __decorate([
 /***/ "../../../../../src/app/components/profiling/profiling.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"flex-container\">\n  <div class=\"container\">\n    <div class=\"row\">\n      <div class=\"col-md-12\">\n        <h2 class=\"title\">Data Profiling</h2>\n        <h5 class=\"subtitle\">Take advantage of on-demand profiling of any Datalake table or view for smart exploratory data analysis\n        </h5>\n        <health-check-non-prod></health-check-non-prod>\n      </div>\n    </div>\n\n\n    <form [formGroup]=\"profilingForm\" novalidate>\n      <div class=\"row\">\n          <div class=\"col-md-3\">\n              <mat-form-field class=\"block-margin\">\n                <mat-select placeholder=\"Select Environment\" autofocus formControlName=\"envName\" >\n                  <mat-option value=\"prodstage\">Prod Stage</mat-option>\n                  <mat-option value=\"prod\">Prod</mat-option>\n                  <mat-option value=\"integration\">NP Integration</mat-option>\n                </mat-select>\n              </mat-form-field>\n            </div>\n        <div class=\"col-md-3\">\n          <mat-form-field class=\"block-margin\">\n            <mat-select placeholder=\"Select Database\" autofocus formControlName=\"dbName\" >\n              <!-- <mat-option *ngFor=\"let zone of zones\" [value]=\"zone.id \" (click)=\"selectZone(zone.name)\">{{zone.name}}</mat-option> -->\n              <mat-option value=\"otis\">otis</mat-option>\n            </mat-select>\n          </mat-form-field>\n        </div>\n        <div class=\"col-md-3\">\n          <mat-form-field class=\"block-margin\">\n            <mat-select placeholder=\"Select Category\" formControlName=\"categoryName\" >\n              <mat-option value=\"tables\">Tables</mat-option>\n              <mat-option value=\"views\">Views</mat-option>\n            </mat-select>\n          </mat-form-field>\n        </div>\n        <div class=\"col-md-3\">\n          <mat-form-field class=\"block-margin\">\n            <mat-select placeholder=\"Select Element\" formControlName=\"elementName\" >\n              <mat-option value=\"custinfo_cd_chgreas_t\">custinfo_cd_chgreas_t</mat-option>\n              <!-- <mat-option *ngFor=\"let zone of zones\" [value]=\"zone.id \" (click)=\"selectZone(zone.name)\">{{zone.name}}</mat-option> -->\n            </mat-select>\n          </mat-form-field>\n        </div>\n      </div>\n\n      <!-- Button Row 1 -->\n      <div class=\"row\">\n        <div class=\"col-md-2\">\n\n        </div>\n        <div class=\"col-md-4\">\n          <button mat-raised-button color=\"accent\" style=\"float:right\" (click)=\"showProfileToggle($event)\">Profile Data</button>\n        </div>\n        <div class=\"col-md-4\">\n          <button mat-raised-button color=\"accent\"  style=\"float:left\" disabled>Re-profile Data</button>\n        </div>\n        <div class=\"col-md-2\">\n\n        </div>\n      </div>\n      <div class=\"row\" *ngIf=\"showProfile\">\n        <div class=\"col-md-12\">\n            <iframe src = \"https://s3.amazonaws.com/lm-labrats/profile_custinfo_cd_chgreas_t.html\" class=\"iframe-class\"></iframe>\n        </div>\n      </div>\n\n      \n\n    </form>\n  </div>\n</div>"
+module.exports = "<div class=\"flex-container\">\n  <div class=\"container\">\n    <div class=\"row\">\n      <div class=\"col-md-12\">\n        <h2 class=\"title\">Data Profiling</h2>\n        <h5 class=\"subtitle\">Take advantage of on-demand profiling of any Datalake table or view for smart exploratory data analysis\n        </h5>\n        <health-check-non-prod></health-check-non-prod>\n      </div>\n    </div>\n\n\n    <form [formGroup]=\"profilingForm\" novalidate>\n      <div class=\"row\">\n          <div class=\"col-md-3\">\n              <mat-form-field class=\"block-margin\">\n                <mat-select placeholder=\"Select Environment\" autofocus formControlName=\"envName\" >\n                  <mat-option value=\"prodstage\" (click)=\"getDatabase('prodstage')\">Prod Stage</mat-option>\n                  <mat-option value=\"prod\" (click)=\"getDatabase('prod')\">Prod</mat-option>\n                  <mat-option value=\"nonprod\" (click)=\"getDatabase('nonprod')\">NP Integration</mat-option>\n                </mat-select>\n              </mat-form-field>\n            </div>\n        <div class=\"col-md-3\">\n          <mat-form-field class=\"block-margin\">\n            <mat-select placeholder=\"Select Database\" autofocus formControlName=\"dbName\" >\n              <!-- <mat-option *ngFor=\"let db of databases\" [value]=\"db\" (click)=\"selectZone(db)\">{{db}}</mat-option> -->\n              <mat-option value=\"otis\">otis</mat-option>\n            </mat-select>\n          </mat-form-field>\n        </div>\n        <div class=\"col-md-3\">\n          <mat-form-field class=\"block-margin\">\n            <mat-select placeholder=\"Select Category\" formControlName=\"categoryName\" >\n              <mat-option value=\"tables\">Tables</mat-option>\n              <mat-option value=\"views\">Views</mat-option>\n            </mat-select>\n          </mat-form-field>\n        </div>\n        <div class=\"col-md-3\">\n          <mat-form-field class=\"block-margin\">\n            <mat-select placeholder=\"Select Element\" formControlName=\"elementName\" >\n              <mat-option value=\"custinfo_cd_chgreas_t\">custinfo_cd_chgreas_t</mat-option>\n              <!-- <mat-option *ngFor=\"let zone of zones\" [value]=\"zone.id \" (click)=\"selectZone(zone.name)\">{{zone.name}}</mat-option> -->\n            </mat-select>\n          </mat-form-field>\n        </div>\n      </div>\n\n      <!-- Button Row 1 -->\n      <div class=\"row\">\n        <div class=\"col-md-2\">\n\n        </div>\n        <div class=\"col-md-4\">\n          <button mat-raised-button color=\"accent\" style=\"float:right\" (click)=\"showProfileToggle($event)\">Profile Data</button>\n        </div>\n        <div class=\"col-md-4\">\n          <button mat-raised-button color=\"accent\"  style=\"float:left\" disabled>Re-profile Data</button>\n        </div>\n        <div class=\"col-md-2\">\n\n        </div>\n      </div>\n      <div class=\"row\" *ngIf=\"showProfile\">\n        <div class=\"col-md-12\">\n            <iframe src = \"https://s3.amazonaws.com/lm-labrats/profile_custinfo_cd_chgreas_t.html\" class=\"iframe-class\"></iframe>\n        </div>\n      </div>\n\n      \n\n    </form>\n  </div>\n</div>"
 
 /***/ }),
 
@@ -1395,6 +1395,7 @@ module.exports = module.exports.toString();
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_forms__ = __webpack_require__("../../../forms/@angular/forms.es5.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_platform_browser__ = __webpack_require__("../../../platform-browser/@angular/platform-browser.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__services_api_service__ = __webpack_require__("../../../../../src/app/services/api.service.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1407,9 +1408,11 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
+
 var ProfilingComponent = (function () {
-    function ProfilingComponent(sanitizer) {
+    function ProfilingComponent(sanitizer, api) {
         this.sanitizer = sanitizer;
+        this.api = api;
         this.link = "https://drive.google.com/a/quantiphi.com/file/d/11RmdbFcwXNR40Ny4wK8O6HikaYEpGP7g/view?usp=sharing";
         this.showProfile = false;
         this.newLink = this.sanitizer.bypassSecurityTrustResourceUrl(this.link);
@@ -1435,6 +1438,12 @@ var ProfilingComponent = (function () {
     ProfilingComponent.prototype.showProfileToggle = function (e) {
         this.showProfile = true;
     };
+    ProfilingComponent.prototype.getDatabases = function (env) {
+        console.log(env);
+        this.api.getDatabaseProfile(env).subscribe(function (data) {
+            console.log(data);
+        });
+    };
     return ProfilingComponent;
 }());
 ProfilingComponent = __decorate([
@@ -1443,10 +1452,10 @@ ProfilingComponent = __decorate([
         template: __webpack_require__("../../../../../src/app/components/profiling/profiling.component.html"),
         styles: [__webpack_require__("../../../../../src/app/components/profiling/profiling.component.sass")]
     }),
-    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_2__angular_platform_browser__["c" /* DomSanitizer */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__angular_platform_browser__["c" /* DomSanitizer */]) === "function" && _a || Object])
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_2__angular_platform_browser__["c" /* DomSanitizer */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__angular_platform_browser__["c" /* DomSanitizer */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_3__services_api_service__["a" /* ApiService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__services_api_service__["a" /* ApiService */]) === "function" && _b || Object])
 ], ProfilingComponent);
 
-var _a;
+var _a, _b;
 //# sourceMappingURL=profiling.component.js.map
 
 /***/ }),
@@ -1732,6 +1741,11 @@ var ApiService = (function () {
     ApiService.prototype.handleError = function (error) {
         console.error(error);
         return __WEBPACK_IMPORTED_MODULE_3_rxjs_Observable__["Observable"].throw(error);
+    };
+    ApiService.prototype.getDatabaseProfile = function (env) {
+        console.log('Getting tables for profile');
+        console.log(env);
+        return this.httpC.get("http://10.224.69.47:9090/api/v1/listdatabase?source_type=hive&environment=" + env);
     };
     //curate
     ApiService.prototype.submitTagCorrections = function (params) {
