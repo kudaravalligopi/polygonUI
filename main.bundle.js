@@ -113,18 +113,16 @@ var _a, _b, _c, _d, _e;
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__angular_http__ = __webpack_require__("../../../http/@angular/http.es5.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__angular_common_http__ = __webpack_require__("../../../common/@angular/common/http.es5.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__services_api_service__ = __webpack_require__("../../../../../src/app/services/api.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__services_fingerprint_service__ = __webpack_require__("../../../../../src/app/services/fingerprint.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__services_curate_service__ = __webpack_require__("../../../../../src/app/services/curate.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__angular_platform_browser_animations__ = __webpack_require__("../../../platform-browser/@angular/platform-browser/animations.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__material_module__ = __webpack_require__("../../../../../src/app/material.module.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__components_configure_source_configure_source_component__ = __webpack_require__("../../../../../src/app/components/configure-source/configure-source.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__components_fingerprint_on_demand_fingerprint_on_demand_component__ = __webpack_require__("../../../../../src/app/components/fingerprint-on-demand/fingerprint-on-demand.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__components_home_home_component__ = __webpack_require__("../../../../../src/app/components/home/home.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__components_form_login_form_login_component__ = __webpack_require__("../../../../../src/app/components/form-login/form-login.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_22__globals__ = __webpack_require__("../../../../../src/app/globals.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_23__components_output_curate_output_curate_component__ = __webpack_require__("../../../../../src/app/components/output-curate/output-curate.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_24__components_health_check_prod_health_check_prod_component__ = __webpack_require__("../../../../../src/app/components/health-check-prod/health-check-prod.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_25__components_health_check_non_prod_health_check_non_prod_component__ = __webpack_require__("../../../../../src/app/components/health-check-non-prod/health-check-non-prod.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__angular_platform_browser_animations__ = __webpack_require__("../../../platform-browser/@angular/platform-browser/animations.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__material_module__ = __webpack_require__("../../../../../src/app/material.module.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__components_configure_source_configure_source_component__ = __webpack_require__("../../../../../src/app/components/configure-source/configure-source.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__components_fingerprint_on_demand_fingerprint_on_demand_component__ = __webpack_require__("../../../../../src/app/components/fingerprint-on-demand/fingerprint-on-demand.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__components_home_home_component__ = __webpack_require__("../../../../../src/app/components/home/home.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__components_form_login_form_login_component__ = __webpack_require__("../../../../../src/app/components/form-login/form-login.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__globals__ = __webpack_require__("../../../../../src/app/globals.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__components_output_curate_output_curate_component__ = __webpack_require__("../../../../../src/app/components/output-curate/output-curate.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_22__components_health_check_prod_health_check_prod_component__ = __webpack_require__("../../../../../src/app/components/health-check-prod/health-check-prod.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_23__components_health_check_non_prod_health_check_non_prod_component__ = __webpack_require__("../../../../../src/app/components/health-check-non-prod/health-check-non-prod.component.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -148,8 +146,6 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 //Services
-
-
 
 //Angular Material
 
@@ -177,24 +173,24 @@ AppModule = __decorate([
             __WEBPACK_IMPORTED_MODULE_6__components_curate_curate_component__["a" /* CurateComponent */],
             __WEBPACK_IMPORTED_MODULE_7__components_catalog_catalog_component__["a" /* CatalogComponent */],
             __WEBPACK_IMPORTED_MODULE_8__components_knowledge_graph_knowledge_graph_component__["a" /* KnowledgeGraphComponent */],
-            __WEBPACK_IMPORTED_MODULE_18__components_configure_source_configure_source_component__["a" /* ConfigureSourceComponent */],
-            __WEBPACK_IMPORTED_MODULE_19__components_fingerprint_on_demand_fingerprint_on_demand_component__["a" /* FingerprintOnDemandComponent */],
-            __WEBPACK_IMPORTED_MODULE_20__components_home_home_component__["a" /* HomeComponent */],
-            __WEBPACK_IMPORTED_MODULE_21__components_form_login_form_login_component__["a" /* FormLoginComponent */],
-            __WEBPACK_IMPORTED_MODULE_23__components_output_curate_output_curate_component__["a" /* OutputCurateComponent */],
-            __WEBPACK_IMPORTED_MODULE_24__components_health_check_prod_health_check_prod_component__["a" /* HealthCheckProdComponent */],
-            __WEBPACK_IMPORTED_MODULE_25__components_health_check_non_prod_health_check_non_prod_component__["a" /* HealthCheckNonProdComponent */]
+            __WEBPACK_IMPORTED_MODULE_16__components_configure_source_configure_source_component__["a" /* ConfigureSourceComponent */],
+            __WEBPACK_IMPORTED_MODULE_17__components_fingerprint_on_demand_fingerprint_on_demand_component__["a" /* FingerprintOnDemandComponent */],
+            __WEBPACK_IMPORTED_MODULE_18__components_home_home_component__["a" /* HomeComponent */],
+            __WEBPACK_IMPORTED_MODULE_19__components_form_login_form_login_component__["a" /* FormLoginComponent */],
+            __WEBPACK_IMPORTED_MODULE_21__components_output_curate_output_curate_component__["a" /* OutputCurateComponent */],
+            __WEBPACK_IMPORTED_MODULE_22__components_health_check_prod_health_check_prod_component__["a" /* HealthCheckProdComponent */],
+            __WEBPACK_IMPORTED_MODULE_23__components_health_check_non_prod_health_check_non_prod_component__["a" /* HealthCheckNonProdComponent */]
         ],
         entryComponents: [
-            __WEBPACK_IMPORTED_MODULE_18__components_configure_source_configure_source_component__["a" /* ConfigureSourceComponent */],
-            __WEBPACK_IMPORTED_MODULE_21__components_form_login_form_login_component__["a" /* FormLoginComponent */],
-            __WEBPACK_IMPORTED_MODULE_23__components_output_curate_output_curate_component__["a" /* OutputCurateComponent */]
+            __WEBPACK_IMPORTED_MODULE_16__components_configure_source_configure_source_component__["a" /* ConfigureSourceComponent */],
+            __WEBPACK_IMPORTED_MODULE_19__components_form_login_form_login_component__["a" /* FormLoginComponent */],
+            __WEBPACK_IMPORTED_MODULE_21__components_output_curate_output_curate_component__["a" /* OutputCurateComponent */]
         ],
         imports: [
             __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__["a" /* BrowserModule */],
             //Angular Material Imports
-            __WEBPACK_IMPORTED_MODULE_17__material_module__["a" /* MaterialModule */],
-            __WEBPACK_IMPORTED_MODULE_16__angular_platform_browser_animations__["a" /* BrowserAnimationsModule */],
+            __WEBPACK_IMPORTED_MODULE_15__material_module__["a" /* MaterialModule */],
+            __WEBPACK_IMPORTED_MODULE_14__angular_platform_browser_animations__["a" /* BrowserAnimationsModule */],
             __WEBPACK_IMPORTED_MODULE_11__angular_http__["b" /* HttpModule */],
             __WEBPACK_IMPORTED_MODULE_10__angular_forms__["f" /* FormsModule */],
             __WEBPACK_IMPORTED_MODULE_10__angular_forms__["k" /* ReactiveFormsModule */],
@@ -202,7 +198,7 @@ AppModule = __decorate([
             //Routings
             __WEBPACK_IMPORTED_MODULE_9__app_routes__["a" /* Routings */]
         ],
-        providers: [__WEBPACK_IMPORTED_MODULE_3__components_fingerprint_fingerprint_component__["a" /* FingerprintComponent */], __WEBPACK_IMPORTED_MODULE_13__services_api_service__["a" /* ApiService */], __WEBPACK_IMPORTED_MODULE_14__services_fingerprint_service__["a" /* FingerprintService */], __WEBPACK_IMPORTED_MODULE_15__services_curate_service__["a" /* CurateService */], __WEBPACK_IMPORTED_MODULE_22__globals__["a" /* Globals */]],
+        providers: [__WEBPACK_IMPORTED_MODULE_3__components_fingerprint_fingerprint_component__["a" /* FingerprintComponent */], __WEBPACK_IMPORTED_MODULE_13__services_api_service__["a" /* ApiService */], __WEBPACK_IMPORTED_MODULE_20__globals__["a" /* Globals */]],
         bootstrap: [__WEBPACK_IMPORTED_MODULE_2__app_component__["a" /* AppComponent */]]
     })
 ], AppModule);
@@ -423,9 +419,8 @@ module.exports = module.exports.toString();
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_rxjs_add_operator_map__ = __webpack_require__("../../../../rxjs/add/operator/map.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_rxjs_add_operator_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_rxjs_add_operator_map__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__services_curate_service__ = __webpack_require__("../../../../../src/app/services/curate.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__services_api_service__ = __webpack_require__("../../../../../src/app/services/api.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_forms__ = __webpack_require__("../../../forms/@angular/forms.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__services_api_service__ = __webpack_require__("../../../../../src/app/services/api.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_forms__ = __webpack_require__("../../../forms/@angular/forms.es5.js");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -439,10 +434,8 @@ var __metadata = (this && this.__metadata) || function (k, v) {
  //Handling Received Data
 
 
-
 var CurateComponent = (function () {
-    function CurateComponent(curateService, api, formBuilder) {
-        this.curateService = curateService;
+    function CurateComponent(api, formBuilder) {
         this.api = api;
         this.formBuilder = formBuilder;
         this.title = "Curate";
@@ -508,7 +501,7 @@ var CurateComponent = (function () {
         this.zones = this.api.getZones();
     };
     CurateComponent.prototype.createForm = function () {
-        this.curateForm = new __WEBPACK_IMPORTED_MODULE_4__angular_forms__["d" /* FormGroup */]({
+        this.curateForm = new __WEBPACK_IMPORTED_MODULE_3__angular_forms__["d" /* FormGroup */]({
             zoneName: this.zoneName,
             sourceName: this.sourceName,
             tableName: this.tableName,
@@ -519,16 +512,16 @@ var CurateComponent = (function () {
         });
     };
     CurateComponent.prototype.createFormControls = function () {
-        this.zoneName = new __WEBPACK_IMPORTED_MODULE_4__angular_forms__["c" /* FormControl */]('', __WEBPACK_IMPORTED_MODULE_4__angular_forms__["l" /* Validators */].required);
-        this.sourceName = new __WEBPACK_IMPORTED_MODULE_4__angular_forms__["c" /* FormControl */]('', __WEBPACK_IMPORTED_MODULE_4__angular_forms__["l" /* Validators */].required);
-        this.tableName = new __WEBPACK_IMPORTED_MODULE_4__angular_forms__["c" /* FormControl */]('', __WEBPACK_IMPORTED_MODULE_4__angular_forms__["l" /* Validators */].required);
-        this.columnName = new __WEBPACK_IMPORTED_MODULE_4__angular_forms__["c" /* FormControl */]('', __WEBPACK_IMPORTED_MODULE_4__angular_forms__["l" /* Validators */].required);
+        this.zoneName = new __WEBPACK_IMPORTED_MODULE_3__angular_forms__["c" /* FormControl */]('', __WEBPACK_IMPORTED_MODULE_3__angular_forms__["l" /* Validators */].required);
+        this.sourceName = new __WEBPACK_IMPORTED_MODULE_3__angular_forms__["c" /* FormControl */]('', __WEBPACK_IMPORTED_MODULE_3__angular_forms__["l" /* Validators */].required);
+        this.tableName = new __WEBPACK_IMPORTED_MODULE_3__angular_forms__["c" /* FormControl */]('', __WEBPACK_IMPORTED_MODULE_3__angular_forms__["l" /* Validators */].required);
+        this.columnName = new __WEBPACK_IMPORTED_MODULE_3__angular_forms__["c" /* FormControl */]('', __WEBPACK_IMPORTED_MODULE_3__angular_forms__["l" /* Validators */].required);
     };
     //Adding and removing new tags
     CurateComponent.prototype.initTagInfo = function () {
         return this.formBuilder.group({
-            tagType: ['', __WEBPACK_IMPORTED_MODULE_4__angular_forms__["l" /* Validators */].required],
-            tagCategory: ['', __WEBPACK_IMPORTED_MODULE_4__angular_forms__["l" /* Validators */].required]
+            tagType: ['', __WEBPACK_IMPORTED_MODULE_3__angular_forms__["l" /* Validators */].required],
+            tagCategory: ['', __WEBPACK_IMPORTED_MODULE_3__angular_forms__["l" /* Validators */].required]
         });
     };
     CurateComponent.prototype.addNewTag = function () {
@@ -561,7 +554,7 @@ var CurateComponent = (function () {
         console.log('Select Source clicked with source name as ' + sourceName);
         this.tableNames = [];
         this.selectedSource = sourceName;
-        this.curateService
+        this.api
             .selectSource(this.selectedSource, this.selectedZone)
             .subscribe(function (tables) {
             _this.tables = tables;
@@ -579,7 +572,7 @@ var CurateComponent = (function () {
         console.log('Select Table clicked with table name as ' + tableName + ' & source name as ' + this.selectedSource + ' & zone name as ' + this.selectedZone);
         this.columnNames = [];
         this.selectedTable = tableName;
-        this.curateService
+        this.api
             .selectTable(this.selectedTable, this.selectedSource, this.selectedZone)
             .subscribe(function (columns) {
             _this.columns = columns;
@@ -624,7 +617,7 @@ var CurateComponent = (function () {
     };
     CurateComponent.prototype.submitTag = function () {
         var sendOP = this.curateForm.value;
-        this.curateService.submitTagCorrections(sendOP);
+        this.api.submitTagCorrections(sendOP);
     };
     CurateComponent.prototype.reset = function () {
         this.fingerprintDataAcquired = false;
@@ -636,12 +629,12 @@ CurateComponent = __decorate([
         selector: 'app-curate',
         template: __webpack_require__("../../../../../src/app/components/curate/curate.component.html"),
         styles: [__webpack_require__("../../../../../src/app/components/curate/curate.component.sass")],
-        providers: [__WEBPACK_IMPORTED_MODULE_3__services_api_service__["a" /* ApiService */], __WEBPACK_IMPORTED_MODULE_2__services_curate_service__["a" /* CurateService */]]
+        providers: [__WEBPACK_IMPORTED_MODULE_2__services_api_service__["a" /* ApiService */]]
     }),
-    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_2__services_curate_service__["a" /* CurateService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__services_curate_service__["a" /* CurateService */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_3__services_api_service__["a" /* ApiService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__services_api_service__["a" /* ApiService */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_4__angular_forms__["b" /* FormBuilder */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_4__angular_forms__["b" /* FormBuilder */]) === "function" && _c || Object])
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_2__services_api_service__["a" /* ApiService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__services_api_service__["a" /* ApiService */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_3__angular_forms__["b" /* FormBuilder */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__angular_forms__["b" /* FormBuilder */]) === "function" && _b || Object])
 ], CurateComponent);
 
-var _a, _b, _c;
+var _a, _b;
 //# sourceMappingURL=curate.component.js.map
 
 /***/ }),
@@ -679,9 +672,8 @@ module.exports = module.exports.toString();
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_rxjs_add_operator_map__ = __webpack_require__("../../../../rxjs/add/operator/map.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_rxjs_add_operator_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_rxjs_add_operator_map__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__services_fingerprint_service__ = __webpack_require__("../../../../../src/app/services/fingerprint.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__services_api_service__ = __webpack_require__("../../../../../src/app/services/api.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_forms__ = __webpack_require__("../../../forms/@angular/forms.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__services_api_service__ = __webpack_require__("../../../../../src/app/services/api.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_forms__ = __webpack_require__("../../../forms/@angular/forms.es5.js");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -695,10 +687,8 @@ var __metadata = (this && this.__metadata) || function (k, v) {
  //Handling Received Data
 
 
-
 var FingerprintOnDemandComponent = (function () {
-    function FingerprintOnDemandComponent(fingerprintService, api) {
-        this.fingerprintService = fingerprintService;
+    function FingerprintOnDemandComponent(api) {
         this.api = api;
         this.title = "FingerPrint";
         this.fingerprintDataAcquired = false;
@@ -730,11 +720,8 @@ var FingerprintOnDemandComponent = (function () {
             _this.sources = sources;
             console.log(sources);
             console.log(typeof (sources));
-            var x = Object.values(sources);
-            console.log(x);
-            for (var i = 0; i < x.length; i++) {
-                _this.sourceNames[i] = x[i];
-            }
+            _this.sourceNames = sources["databases"];
+            console.log(_this.sourceNames);
         });
     };
     FingerprintOnDemandComponent.prototype.selectSource = function (sourceName) {
@@ -742,30 +729,27 @@ var FingerprintOnDemandComponent = (function () {
         console.log('Select Source clicked with source name as ' + sourceName);
         this.tableNames = [];
         this.selectedSource = sourceName;
-        this.fingerprintService
+        this.api
             .selectSource(this.selectedSource, this.selectedZone)
             .subscribe(function (tables) {
             _this.tables = tables;
             console.log(tables);
             console.log(typeof (tables));
-            var x = Object.values(tables);
-            console.log(x);
-            for (var i = 0; i < x.length; i++) {
-                _this.tableNames[i] = x[i];
-            }
+            _this.tableNames = tables["tables"];
+            console.log(_this.tableNames);
             _this.tableNames.sort();
         });
     };
     //Form Controls
     FingerprintOnDemandComponent.prototype.createFormControls = function () {
-        this.zoneName = new __WEBPACK_IMPORTED_MODULE_4__angular_forms__["c" /* FormControl */]('', [__WEBPACK_IMPORTED_MODULE_4__angular_forms__["l" /* Validators */].required]);
-        this.sourceName = new __WEBPACK_IMPORTED_MODULE_4__angular_forms__["c" /* FormControl */]('', [__WEBPACK_IMPORTED_MODULE_4__angular_forms__["l" /* Validators */].required]);
-        this.tableName = new __WEBPACK_IMPORTED_MODULE_4__angular_forms__["c" /* FormControl */]('', [__WEBPACK_IMPORTED_MODULE_4__angular_forms__["l" /* Validators */].required]);
-        this.columnName = new __WEBPACK_IMPORTED_MODULE_4__angular_forms__["c" /* FormControl */]('', [__WEBPACK_IMPORTED_MODULE_4__angular_forms__["l" /* Validators */].required]);
-        this.fingerprintType = new __WEBPACK_IMPORTED_MODULE_4__angular_forms__["c" /* FormControl */]('', [__WEBPACK_IMPORTED_MODULE_4__angular_forms__["l" /* Validators */].required]);
+        this.zoneName = new __WEBPACK_IMPORTED_MODULE_3__angular_forms__["c" /* FormControl */]('', [__WEBPACK_IMPORTED_MODULE_3__angular_forms__["l" /* Validators */].required]);
+        this.sourceName = new __WEBPACK_IMPORTED_MODULE_3__angular_forms__["c" /* FormControl */]('', [__WEBPACK_IMPORTED_MODULE_3__angular_forms__["l" /* Validators */].required]);
+        this.tableName = new __WEBPACK_IMPORTED_MODULE_3__angular_forms__["c" /* FormControl */]('', [__WEBPACK_IMPORTED_MODULE_3__angular_forms__["l" /* Validators */].required]);
+        this.columnName = new __WEBPACK_IMPORTED_MODULE_3__angular_forms__["c" /* FormControl */]('', [__WEBPACK_IMPORTED_MODULE_3__angular_forms__["l" /* Validators */].required]);
+        this.fingerprintType = new __WEBPACK_IMPORTED_MODULE_3__angular_forms__["c" /* FormControl */]('', [__WEBPACK_IMPORTED_MODULE_3__angular_forms__["l" /* Validators */].required]);
     };
     FingerprintOnDemandComponent.prototype.createForm = function () {
-        this.fingerprintOnDemandForm = new __WEBPACK_IMPORTED_MODULE_4__angular_forms__["d" /* FormGroup */]({
+        this.fingerprintOnDemandForm = new __WEBPACK_IMPORTED_MODULE_3__angular_forms__["d" /* FormGroup */]({
             zoneName: this.zoneName,
             sourceName: this.sourceName,
             tableName: this.tableName,
@@ -784,10 +768,10 @@ FingerprintOnDemandComponent = __decorate([
         template: __webpack_require__("../../../../../src/app/components/fingerprint-on-demand/fingerprint-on-demand.component.html"),
         styles: [__webpack_require__("../../../../../src/app/components/fingerprint-on-demand/fingerprint-on-demand.component.sass")]
     }),
-    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_2__services_fingerprint_service__["a" /* FingerprintService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__services_fingerprint_service__["a" /* FingerprintService */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_3__services_api_service__["a" /* ApiService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__services_api_service__["a" /* ApiService */]) === "function" && _b || Object])
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_2__services_api_service__["a" /* ApiService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__services_api_service__["a" /* ApiService */]) === "function" && _a || Object])
 ], FingerprintOnDemandComponent);
 
-var _a, _b;
+var _a;
 //# sourceMappingURL=fingerprint-on-demand.component.js.map
 
 /***/ }),
@@ -825,9 +809,8 @@ module.exports = module.exports.toString();
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_rxjs_add_operator_map__ = __webpack_require__("../../../../rxjs/add/operator/map.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_rxjs_add_operator_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_rxjs_add_operator_map__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__services_fingerprint_service__ = __webpack_require__("../../../../../src/app/services/fingerprint.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__services_api_service__ = __webpack_require__("../../../../../src/app/services/api.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_forms__ = __webpack_require__("../../../forms/@angular/forms.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__services_api_service__ = __webpack_require__("../../../../../src/app/services/api.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_forms__ = __webpack_require__("../../../forms/@angular/forms.es5.js");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -841,10 +824,8 @@ var __metadata = (this && this.__metadata) || function (k, v) {
  //Handling Received Data
 
 
-
 var FingerprintComponent = (function () {
-    function FingerprintComponent(fingerprintService, api) {
-        this.fingerprintService = fingerprintService;
+    function FingerprintComponent(api) {
         this.api = api;
         this.title = "FingerPrint";
         this.fingerprintDataAcquired = false;
@@ -865,13 +846,13 @@ var FingerprintComponent = (function () {
         this.zones = this.api.getZones();
     };
     FingerprintComponent.prototype.createFormControls = function () {
-        this.zoneName = new __WEBPACK_IMPORTED_MODULE_4__angular_forms__["c" /* FormControl */]('', [__WEBPACK_IMPORTED_MODULE_4__angular_forms__["l" /* Validators */].required]);
-        this.sourceName = new __WEBPACK_IMPORTED_MODULE_4__angular_forms__["c" /* FormControl */]('', [__WEBPACK_IMPORTED_MODULE_4__angular_forms__["l" /* Validators */].required]);
-        this.tableName = new __WEBPACK_IMPORTED_MODULE_4__angular_forms__["c" /* FormControl */]('', [__WEBPACK_IMPORTED_MODULE_4__angular_forms__["l" /* Validators */].required]);
-        this.columnName = new __WEBPACK_IMPORTED_MODULE_4__angular_forms__["c" /* FormControl */]('', [__WEBPACK_IMPORTED_MODULE_4__angular_forms__["l" /* Validators */].required]);
+        this.zoneName = new __WEBPACK_IMPORTED_MODULE_3__angular_forms__["c" /* FormControl */]('', [__WEBPACK_IMPORTED_MODULE_3__angular_forms__["l" /* Validators */].required]);
+        this.sourceName = new __WEBPACK_IMPORTED_MODULE_3__angular_forms__["c" /* FormControl */]('', [__WEBPACK_IMPORTED_MODULE_3__angular_forms__["l" /* Validators */].required]);
+        this.tableName = new __WEBPACK_IMPORTED_MODULE_3__angular_forms__["c" /* FormControl */]('', [__WEBPACK_IMPORTED_MODULE_3__angular_forms__["l" /* Validators */].required]);
+        this.columnName = new __WEBPACK_IMPORTED_MODULE_3__angular_forms__["c" /* FormControl */]('', [__WEBPACK_IMPORTED_MODULE_3__angular_forms__["l" /* Validators */].required]);
     };
     FingerprintComponent.prototype.createForm = function () {
-        this.fingerprintForm = new __WEBPACK_IMPORTED_MODULE_4__angular_forms__["d" /* FormGroup */]({
+        this.fingerprintForm = new __WEBPACK_IMPORTED_MODULE_3__angular_forms__["d" /* FormGroup */]({
             zoneName: this.zoneName,
             sourceName: this.sourceName,
             tableName: this.tableName,
@@ -953,12 +934,12 @@ FingerprintComponent = __decorate([
         selector: 'app-fingerprint',
         template: __webpack_require__("../../../../../src/app/components/fingerprint/fingerprint.component.html"),
         styles: [__webpack_require__("../../../../../src/app/components/fingerprint/fingerprint.component.sass")],
-        providers: [__WEBPACK_IMPORTED_MODULE_3__services_api_service__["a" /* ApiService */], __WEBPACK_IMPORTED_MODULE_2__services_fingerprint_service__["a" /* FingerprintService */]]
+        providers: [__WEBPACK_IMPORTED_MODULE_2__services_api_service__["a" /* ApiService */]]
     }),
-    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_2__services_fingerprint_service__["a" /* FingerprintService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__services_fingerprint_service__["a" /* FingerprintService */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_3__services_api_service__["a" /* ApiService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__services_api_service__["a" /* ApiService */]) === "function" && _b || Object])
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_2__services_api_service__["a" /* ApiService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__services_api_service__["a" /* ApiService */]) === "function" && _a || Object])
 ], FingerprintComponent);
 
-var _a, _b;
+var _a;
 //# sourceMappingURL=fingerprint.component.js.map
 
 /***/ }),
@@ -1743,10 +1724,9 @@ var ApiService = (function () {
             columns[i] = "\"" + column[i] + "\"";
         }
         console.log("Column names in API END POINT Front End");
-        var x = columns.toString();
-        console.log(x);
+        console.log(columns);
         try {
-            return this.httpC.post('/v1/autotagging/submit', { "data": { "table_name": table, "database_name": source, "bucket_name": zone, "type": "raw", "colums": "[" + x + "]" } });
+            return this.httpC.post('/v1/autotagging/submit', { "data": { "table_name": table, "database_name": source, "bucket_name": zone, "type": "raw", "colums": columns } });
         }
         catch (err) {
             console.log(err);
@@ -1795,104 +1775,6 @@ ApiService = __decorate([
 
 var _a, _b;
 //# sourceMappingURL=api.service.js.map
-
-/***/ }),
-
-/***/ "../../../../../src/app/services/curate.service.ts":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CurateService; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__api_service__ = __webpack_require__("../../../../../src/app/services/api.service.ts");
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-var CurateService = (function () {
-    function CurateService(api) {
-        this.api = api;
-    }
-    // getAllZones():Observable<Zones[]>{
-    //   return this.api.getZones()
-    // }
-    // selectZone(zoneName: string):Observable<Sources>{
-    //   return this.api.selectZone(zoneName)
-    // }
-    CurateService.prototype.selectSource = function (sourceName, zoneName) {
-        return this.api.selectSource(sourceName, zoneName);
-    };
-    CurateService.prototype.selectTable = function (tableName, sourceName, zoneName) {
-        return this.api.selectTable(tableName, sourceName, zoneName);
-    };
-    CurateService.prototype.submitTagCorrections = function (params) {
-        return this.api.submitTagCorrections(params);
-    };
-    return CurateService;
-}());
-CurateService = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["C" /* Injectable */])(),
-    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__api_service__["a" /* ApiService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__api_service__["a" /* ApiService */]) === "function" && _a || Object])
-], CurateService);
-
-var _a;
-//# sourceMappingURL=curate.service.js.map
-
-/***/ }),
-
-/***/ "../../../../../src/app/services/fingerprint.service.ts":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return FingerprintService; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__api_service__ = __webpack_require__("../../../../../src/app/services/api.service.ts");
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-var FingerprintService = (function () {
-    function FingerprintService(api) {
-        this.api = api;
-    }
-    // getAllZones():Observable<Zones[]>{
-    //   // return this.api.getZones()
-    // }
-    // selectZone(zoneName: string):Observable<Sources>{
-    //   return this.api.selectZone(zoneName)
-    // }
-    FingerprintService.prototype.selectSource = function (sourceName, zoneName) {
-        return this.api.selectSource(sourceName, zoneName);
-    };
-    FingerprintService.prototype.selectTable = function (tableName, sourceName, zoneName) {
-        return this.api.selectTable(tableName, sourceName, zoneName);
-    };
-    FingerprintService.prototype.fingerprint = function (columnName, tableName, sourceName, zoneName) {
-        return this.api.fingerprint(columnName, tableName, sourceName, zoneName);
-    };
-    return FingerprintService;
-}());
-FingerprintService = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["C" /* Injectable */])(),
-    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__api_service__["a" /* ApiService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__api_service__["a" /* ApiService */]) === "function" && _a || Object])
-], FingerprintService);
-
-var _a;
-//# sourceMappingURL=fingerprint.service.js.map
 
 /***/ }),
 
