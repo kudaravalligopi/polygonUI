@@ -611,6 +611,8 @@ var CurateComponent = (function () {
         console.log(sendOP);
         this.api.submitTagCorrections(sendOP).subscribe(function (data) {
             console.log(data);
+            console.log(data["Status_Message"]);
+            window.alert(data["Status_Message"]);
         });
     };
     CurateComponent.prototype.reset = function () {
