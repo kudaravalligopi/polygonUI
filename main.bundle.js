@@ -1737,7 +1737,7 @@ var ApiService = (function () {
         //method which selects particular zone
         //Select the zone and populate the source drop down
         console.log(zone);
-        return this.httpC.get("/v1/s3/listdatabase?bucket_name=" + zone);
+        return this.httpC.get("/v1/s3/listdatabase");
     };
     ApiService.prototype.selectSource = function (source, zone) {
         //method which selects particular source
@@ -1746,10 +1746,7 @@ var ApiService = (function () {
     ApiService.prototype.selectTable = function (table, source, zone) {
         //method which selects particular table
         //Select the table and populate the columns drop down
-        var params = new __WEBPACK_IMPORTED_MODULE_2__angular_common_http__["c" /* HttpParams */]().set('bucket_name', zone);
-        params.append('database_name', source);
-        params.append('table_name', table);
-        return this.httpC.get('/v1/s3/rawzone/listcolumns', { params: params });
+        return this.httpC.get('/v1/s3/rawzone/listcolumns');
     };
     ApiService.prototype.fingerprint = function (column, table, source, zone) {
         console.log("\n    Column Name : " + column + "\n    Table Name : " + table + "\n    Source Name : " + source + "\n    Zone Name : " + zone + "\n    ");
