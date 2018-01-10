@@ -915,7 +915,7 @@ var FingerprintComponent = (function () {
             .subscribe(function (columns) {
             _this.columns = columns;
             console.log(columns);
-            _this.columnNames = columns["colums"];
+            _this.columnNames = columns["columns"];
             console.log(_this.columnNames);
             _this.columnNames.sort();
         });
