@@ -1737,13 +1737,13 @@ var ApiService = (function () {
         //method which selects particular zone
         //Select the zone and populate the source drop down
         var params = new __WEBPACK_IMPORTED_MODULE_2__angular_common_http__["c" /* HttpParams */]().set('bucket_name', zone);
-        return this.http.get('http://10.224.69.47:9090/v1/s3/listdatabase', { params: params });
+        return this.http.get('/v1/s3/listdatabase', { params: params });
     };
     ApiService.prototype.selectSource = function (source, zone) {
         //method which selects particular source
         var params = new __WEBPACK_IMPORTED_MODULE_2__angular_common_http__["c" /* HttpParams */]().set('bucket_name', zone);
         params.append('database_name', source);
-        return this.httpC.get('http://10.224.69.47:9090/v1/s3/listtables', { params: params });
+        return this.httpC.get('/v1/s3/listtables', { params: params });
     };
     ApiService.prototype.selectTable = function (table, source, zone) {
         //method which selects particular table
@@ -1751,7 +1751,7 @@ var ApiService = (function () {
         var params = new __WEBPACK_IMPORTED_MODULE_2__angular_common_http__["c" /* HttpParams */]().set('bucket_name', zone);
         params.append('database_name', source);
         params.append('table_name', table);
-        return this.httpC.get('"http://10.224.69.47:9090/v1/s3/rawzone/listcolumns', { params: params });
+        return this.httpC.get('/v1/s3/rawzone/listcolumns', { params: params });
     };
     ApiService.prototype.fingerprint = function (column, table, source, zone) {
         console.log("\n    Column Name : " + column + "\n    Table Name : " + table + "\n    Source Name : " + source + "\n    Zone Name : " + zone + "\n    ");
@@ -1760,7 +1760,7 @@ var ApiService = (function () {
             column[i] = "\"" + column[i] + "\"";
         }
         try {
-            return this.httpC.post('http://10.224.69.47:9090/v1/autotagging/submit', { "data": { "table_name": table, "database_name": source, "bucket_name": zone, "type": "raw", "colums": [columns] } });
+            return this.httpC.post('/v1/autotagging/submit', { "data": { "table_name": table, "database_name": source, "bucket_name": zone, "type": "raw", "colums": [columns] } });
         }
         catch (err) {
             console.log(err);
