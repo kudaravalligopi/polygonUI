@@ -900,12 +900,8 @@ var FingerprintComponent = (function () {
             .subscribe(function (tables) {
             _this.tables = tables;
             console.log(tables);
-            console.log(typeof (tables));
-            var x = Object.values(tables);
-            console.log(x);
-            for (var i = 0; i < x.length; i++) {
-                _this.tableNames[i] = x[i];
-            }
+            _this.tableNames = tables["tables"];
+            console.log(_this.tableNames);
             _this.tableNames.sort();
         });
     };
@@ -919,12 +915,8 @@ var FingerprintComponent = (function () {
             .subscribe(function (columns) {
             _this.columns = columns;
             console.log(columns);
-            console.log(typeof (columns));
-            var x = Object.values(columns);
-            console.log(x);
-            for (var i = 0; i < x.length; i++) {
-                _this.columnNames[i] = x[i];
-            }
+            _this.columnNames = columns["colums"];
+            console.log(_this.columnNames);
             _this.columnNames.sort();
         });
     };
@@ -1737,12 +1729,12 @@ var ApiService = (function () {
     };
     ApiService.prototype.selectSource = function (source, zone) {
         //method which selects particular source
-        return this.httpC.get('/v1/s3/listtables?bucket_name=${zone}&database_name=${source}');
+        return this.httpC.get("/v1/s3/listtables?bucket_name=" + zone + "&database_name=" + source);
     };
     ApiService.prototype.selectTable = function (table, source, zone) {
         //method which selects particular table
         //Select the table and populate the columns drop down
-        return this.httpC.get('/v1/s3/rawzone/listcolumns');
+        return this.httpC.get("/v1/s3/rawzone/listcolumns?bucket_name=" + zone + "&database_name=" + source + "&table_name=" + table);
     };
     ApiService.prototype.fingerprint = function (column, table, source, zone) {
         console.log("\n    Column Name : " + column + "\n    Table Name : " + table + "\n    Source Name : " + source + "\n    Zone Name : " + zone + "\n    ");
