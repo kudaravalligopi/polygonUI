@@ -1721,7 +1721,7 @@ var ApiService = (function () {
         console.log("\n    Column Name : " + column + "\n    Table Name : " + table + "\n    Source Name : " + source + "\n    Zone Name : " + zone + "\n    ");
         var columns = [];
         for (var i = 0; i < column.length; i++) {
-            columns[i] = "\"" + column[i] + "\"";
+            columns[i] = "" + column[i];
         }
         console.log("Column names in API END POINT Front End");
         console.log(columns);
