@@ -247,6 +247,9 @@ var appRoutes = [
     { path: 'knowledge-graph', component: __WEBPACK_IMPORTED_MODULE_5__components_knowledge_graph_knowledge_graph_component__["a" /* KnowledgeGraphComponent */] },
     { path: 'profiling', component: __WEBPACK_IMPORTED_MODULE_6__components_profiling_profiling_component__["a" /* ProfilingComponent */] },
     { path: 'sources', component: __WEBPACK_IMPORTED_MODULE_7__components_sources_sources_component__["a" /* SourcesComponent */] },
+    { path: 'logout', redirectTo: '/logout' }
+    // otherwise redirect to home
+    // { path: '**', redirectTo: '' }
 ];
 var Routings = __WEBPACK_IMPORTED_MODULE_0__angular_router__["b" /* RouterModule */].forRoot(appRoutes);
 //# sourceMappingURL=app.routes.js.map
