@@ -16,7 +16,7 @@ webpackEmptyAsyncContext.id = "../../../../../src lazy recursive";
 /***/ "../../../../../src/app/app.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<!--The content below is only a placeholder and can be replaced.-->\n<mat-toolbar color=\"primary\" id=\"#navbar\">\n    <span [routerLink]=\"['']\" class=\"logo-wrapper\">\n        <mat-icon svgIcon=\"lmLogo\" class=\"logo\"></mat-icon>\n\n        <span class=\"logo-text\">Liberty Mutual</span>\n    </span>\n    <span class=\"spacer\"></span>\n    <span>\n        <button style=\"color:white\" mat-button [routerLink]=\"['sources']\" routerLinkActive=\"active-link\">Sources</button>\n        <button style=\"color:white\" mat-button [routerLink]=\"['profiling']\" routerLinkActive=\"active-link\">Profiling</button>\n        <button style=\"color:white\" mat-button [matMenuTriggerFor]=\"menu\">Fingerprint</button>\n        <mat-menu #menu=\"matMenu\" yPosition=\"below\" [overlapTrigger]=\"false\">\n            <button mat-menu-item [routerLink]=\"['fingerprint']\" routerLinkActive=\"active-link\">Fingerprint Interactive</button>\n            <button mat-menu-item [routerLink]=\"['fingerprint-on-demand']\" routerLinkActive=\"active-link\">Fingerprint On Demand</button>\n        </mat-menu>\n        <button style=\"color:white\" mat-button [routerLink]=\"['curate']\" routerLinkActive=\"active-link\">Curate</button>\n        <button style=\"color:white\" mat-button [routerLink]=\"['catalog']\" routerLinkActive=\"active-link\">Catalog</button>\n        <button style=\"color:white\" mat-button [routerLink]=\"['knowledge-graph']\" routerLinkActive=\"active-link\">Knowledge-Graph</button>\n        <button mat-raised-button color=\"primary\" *ngIf=\"!this.globals.loggedIn\" (click)=\"openLoginForm()\">Logout</button>\n        <button mat-raised-button color=\"primary\" *ngIf=\"this.globals.loggedIn\">Log Out</button>\n    </span>\n\n</mat-toolbar>\n<router-outlet></router-outlet>\n<div class=\"footer\">\n    <div class=\"container\">\n        <div class=\"row\">\n            <div class=\"col-md-4\" style=\"text-align:center\">\n                <h6>Copyright Liberty Mutual Insurance</h6>\n            </div>\n            <div class=\"col-md-4\">\n\n            </div>\n            <div class=\"col-md-4\" style=\"text-align:center\">\n                <h6>Developed by Team Labrats 2017</h6>\n            </div>\n        </div>\n    </div>\n</div>"
+module.exports = "<!--The content below is only a placeholder and can be replaced.-->\n<mat-toolbar color=\"primary\" id=\"#navbar\">\n  <span [routerLink]=\"['']\" class=\"logo-wrapper\">\n    <mat-icon svgIcon=\"lmLogo\" class=\"logo\"></mat-icon>\n\n    <span class=\"logo-text\">Liberty Mutual</span>\n  </span>\n  <span class=\"spacer\"></span>\n  <span>\n    <button style=\"color:white\" mat-button [routerLink]=\"['sources']\" routerLinkActive=\"active-link\">Sources</button>\n    <button style=\"color:white\" mat-button [routerLink]=\"['profiling']\" routerLinkActive=\"active-link\">Profiling</button>\n    <button style=\"color:white\" mat-button [matMenuTriggerFor]=\"menuFingerprint\">Fingerprint</button>\n    <mat-menu #menuFingerprint=\"matMenu\" yPosition=\"below\" [overlapTrigger]=\"false\">\n      <button mat-menu-item [routerLink]=\"['fingerprint']\" routerLinkActive=\"active-link\">Fingerprint Interactive</button>\n      <button mat-menu-item [routerLink]=\"['fingerprint-on-demand']\" routerLinkActive=\"active-link\">Fingerprint On Demand</button>\n    </mat-menu>\n    <button style=\"color:white\" mat-button [matMenuTriggerFor]=\"menuCurate\">Curate</button>\n    <mat-menu #menuCurate=\"matMenu\" yPosition=\"below\" [overlapTrigger]=\"false\">\n      <button mat-menu-item [routerLink]=\"['curate-tag-correction']\" routerLinkActive=\"active-link\">Curate Tag Correction</button>\n      <button mat-menu-item [routerLink]=\"['curate-corpus-correction']\" routerLinkActive=\"active-link\">Curate Corpus Correction</button>\n    </mat-menu>\n    <button style=\"color:white\" mat-button [routerLink]=\"['catalog']\" routerLinkActive=\"active-link\">Catalog</button>\n    <button style=\"color:white\" mat-button [routerLink]=\"['knowledge-graph']\" routerLinkActive=\"active-link\">Knowledge-Graph</button>\n    <button mat-raised-button color=\"primary\" *ngIf=\"!this.globals.loggedIn\" (click)=\"openLoginForm()\">Logout</button>\n    <button mat-raised-button color=\"primary\" *ngIf=\"this.globals.loggedIn\">Log Out</button>\n  </span>\n\n</mat-toolbar>\n<router-outlet></router-outlet>\n<div class=\"footer\">\n  <div class=\"container\">\n    <div class=\"row\">\n      <div class=\"col-md-4\" style=\"text-align:center\">\n        <h6>Copyright Liberty Mutual Insurance</h6>\n      </div>\n      <div class=\"col-md-4\">\n\n      </div>\n      <div class=\"col-md-4\" style=\"text-align:center\">\n        <h6>Developed by Team Labrats 2017</h6>\n      </div>\n    </div>\n  </div>\n</div>\n"
 
 /***/ }),
 
@@ -123,6 +123,7 @@ var _a, _b, _c, _d, _e;
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__components_output_curate_output_curate_component__ = __webpack_require__("../../../../../src/app/components/output-curate/output-curate.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_22__components_health_check_prod_health_check_prod_component__ = __webpack_require__("../../../../../src/app/components/health-check-prod/health-check-prod.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_23__components_health_check_non_prod_health_check_non_prod_component__ = __webpack_require__("../../../../../src/app/components/health-check-non-prod/health-check-non-prod.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_24__components_curate_corpus_correction_curate_corpus_correction_component__ = __webpack_require__("../../../../../src/app/components/curate-corpus-correction/curate-corpus-correction.component.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -158,6 +159,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
+
 var AppModule = (function () {
     function AppModule() {
     }
@@ -179,7 +181,8 @@ AppModule = __decorate([
             __WEBPACK_IMPORTED_MODULE_19__components_form_login_form_login_component__["a" /* FormLoginComponent */],
             __WEBPACK_IMPORTED_MODULE_21__components_output_curate_output_curate_component__["a" /* OutputCurateComponent */],
             __WEBPACK_IMPORTED_MODULE_22__components_health_check_prod_health_check_prod_component__["a" /* HealthCheckProdComponent */],
-            __WEBPACK_IMPORTED_MODULE_23__components_health_check_non_prod_health_check_non_prod_component__["a" /* HealthCheckNonProdComponent */]
+            __WEBPACK_IMPORTED_MODULE_23__components_health_check_non_prod_health_check_non_prod_component__["a" /* HealthCheckNonProdComponent */],
+            __WEBPACK_IMPORTED_MODULE_24__components_curate_corpus_correction_curate_corpus_correction_component__["a" /* CurateCorpusCorrectionComponent */]
         ],
         entryComponents: [
             __WEBPACK_IMPORTED_MODULE_16__components_configure_source_configure_source_component__["a" /* ConfigureSourceComponent */],
@@ -216,11 +219,12 @@ AppModule = __decorate([
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__components_fingerprint_fingerprint_component__ = __webpack_require__("../../../../../src/app/components/fingerprint/fingerprint.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__components_catalog_catalog_component__ = __webpack_require__("../../../../../src/app/components/catalog/catalog.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__components_curate_curate_component__ = __webpack_require__("../../../../../src/app/components/curate/curate.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__components_knowledge_graph_knowledge_graph_component__ = __webpack_require__("../../../../../src/app/components/knowledge-graph/knowledge-graph.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__components_profiling_profiling_component__ = __webpack_require__("../../../../../src/app/components/profiling/profiling.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__components_sources_sources_component__ = __webpack_require__("../../../../../src/app/components/sources/sources.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__components_fingerprint_on_demand_fingerprint_on_demand_component__ = __webpack_require__("../../../../../src/app/components/fingerprint-on-demand/fingerprint-on-demand.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__components_home_home_component__ = __webpack_require__("../../../../../src/app/components/home/home.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__components_curate_corpus_correction_curate_corpus_correction_component__ = __webpack_require__("../../../../../src/app/components/curate-corpus-correction/curate-corpus-correction.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__components_knowledge_graph_knowledge_graph_component__ = __webpack_require__("../../../../../src/app/components/knowledge-graph/knowledge-graph.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__components_profiling_profiling_component__ = __webpack_require__("../../../../../src/app/components/profiling/profiling.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__components_sources_sources_component__ = __webpack_require__("../../../../../src/app/components/sources/sources.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__components_fingerprint_on_demand_fingerprint_on_demand_component__ = __webpack_require__("../../../../../src/app/components/fingerprint-on-demand/fingerprint-on-demand.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__components_home_home_component__ = __webpack_require__("../../../../../src/app/components/home/home.component.ts");
 
 //Component Declarations
 
@@ -231,15 +235,17 @@ AppModule = __decorate([
 
 
 
+
 var appRoutes = [
-    { path: '', component: __WEBPACK_IMPORTED_MODULE_8__components_home_home_component__["a" /* HomeComponent */] },
+    { path: '', component: __WEBPACK_IMPORTED_MODULE_9__components_home_home_component__["a" /* HomeComponent */] },
     { path: 'fingerprint', component: __WEBPACK_IMPORTED_MODULE_1__components_fingerprint_fingerprint_component__["a" /* FingerprintComponent */] },
-    { path: 'fingerprint-on-demand', component: __WEBPACK_IMPORTED_MODULE_7__components_fingerprint_on_demand_fingerprint_on_demand_component__["a" /* FingerprintOnDemandComponent */] },
+    { path: 'fingerprint-on-demand', component: __WEBPACK_IMPORTED_MODULE_8__components_fingerprint_on_demand_fingerprint_on_demand_component__["a" /* FingerprintOnDemandComponent */] },
     { path: 'catalog', component: __WEBPACK_IMPORTED_MODULE_2__components_catalog_catalog_component__["a" /* CatalogComponent */] },
-    { path: 'curate', component: __WEBPACK_IMPORTED_MODULE_3__components_curate_curate_component__["a" /* CurateComponent */] },
-    { path: 'knowledge-graph', component: __WEBPACK_IMPORTED_MODULE_4__components_knowledge_graph_knowledge_graph_component__["a" /* KnowledgeGraphComponent */] },
-    { path: 'profiling', component: __WEBPACK_IMPORTED_MODULE_5__components_profiling_profiling_component__["a" /* ProfilingComponent */] },
-    { path: 'sources', component: __WEBPACK_IMPORTED_MODULE_6__components_sources_sources_component__["a" /* SourcesComponent */] },
+    { path: 'curate-tag-correction', component: __WEBPACK_IMPORTED_MODULE_3__components_curate_curate_component__["a" /* CurateComponent */] },
+    { path: 'curate-corpus-correction', component: __WEBPACK_IMPORTED_MODULE_4__components_curate_corpus_correction_curate_corpus_correction_component__["a" /* CurateCorpusCorrectionComponent */] },
+    { path: 'knowledge-graph', component: __WEBPACK_IMPORTED_MODULE_5__components_knowledge_graph_knowledge_graph_component__["a" /* KnowledgeGraphComponent */] },
+    { path: 'profiling', component: __WEBPACK_IMPORTED_MODULE_6__components_profiling_profiling_component__["a" /* ProfilingComponent */] },
+    { path: 'sources', component: __WEBPACK_IMPORTED_MODULE_7__components_sources_sources_component__["a" /* SourcesComponent */] },
 ];
 var Routings = __WEBPACK_IMPORTED_MODULE_0__angular_router__["a" /* RouterModule */].forRoot(appRoutes);
 //# sourceMappingURL=app.routes.js.map
@@ -383,6 +389,89 @@ ConfigureSourceComponent = __decorate([
 
 var _a;
 //# sourceMappingURL=configure-source.component.js.map
+
+/***/ }),
+
+/***/ "../../../../../src/app/components/curate-corpus-correction/curate-corpus-correction.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"flex-container\">\n  <div class=\"container\">\n    <div class=\"row\">\n      <div class=\"col-md-12\">\n        <h2 class=\"title\">Curate: Corpus Correction</h2>\n        <h5 class=\"subtitle\">Make curated tag entries into the ops_table and subsequently re-tag in Atlas.</h5>\n        <health-check-non-prod></health-check-non-prod>\n      </div>\n    </div>\n    <div class=\"row\">\n      <section id=\"inputs\" class=\"col-mat-12\">\n        <form [formGroup]=\"curateCorpusForm\" novalidate>\n          <div class=\"row\">\n            <div class=\"col-md-3\">\n              <mat-form-field>\n                <mat-select placeholder=\"Select Corpus Type\" class=\"fingerprint-select\" autofocus formControlName=\"corpusType\">\n                  <mat-option value=\"distinct\">Distinct</mat-option>\n                  <mat-option value=\"fuzzy\">Fuzzy</mat-option>\n                </mat-select>\n              </mat-form-field>\n            </div>\n            <div class=\"col-md-3\">\n\n              <mat-form-field>\n                <mat-select placeholder=\"Select Correction Mode\" class=\"fingerprint-select\" formControlName=\"correctionMode\">\n                  <mat-option value=\"overwrite\">Overwrite</mat-option>\n                  <mat-option value=\"append\">Append</mat-option>\n                </mat-select>\n              </mat-form-field>\n            </div>\n            <div class=\"col-md-3\">\n              <mat-form-field>\n                <mat-select placeholder=\"Select Destination\" class=\"fingerprint-select\" formControlName=\"destination\">\n                  <mat-option value=\"s3\">S3</mat-option>\n                  <mat-option value=\"hive\">Hive</mat-option>\n                </mat-select>\n              </mat-form-field>\n            </div>\n            <div class=\"col-md-3\">\n              <mat-form-field>\n                <mat-select placeholder=\"Select Format\" class=\"fingerprint-select\" autofocus formControlName=\"format\">\n                  <mat-option value=\"csv\">CSV</mat-option>\n                  <mat-option value=\"json\">JSON</mat-option>\n                </mat-select>\n              </mat-form-field>\n            </div>\n          </div>\n          <div class=\"row\">\n            <div class=\"col-md-2\"></div>\n            <div class=\"col-md-8\">\n              <textarea formControlName=\"corpusCorrection\" placeholder=\"Enter Corpus Corrections\">\n\n              </textarea>\n            </div>\n            <div class=\"col-md-2\"></div>\n          </div>\n        </form>\n      </section>\n    </div>\n    <div class=\"row\" *ngIf=\"showProgressSpinner\">\n      <div class=\"col-sm-12\">\n        <mat-progress-spinner mode=\"indeterminate\" color=\"primary\" [strokeWidth]=\"5\" style=\"margin: 0 auto\"></mat-progress-spinner>\n      </div>\n    </div>\n    <div class=\"row\">\n      <section id=\"outputs\" class=\"col-mat-12\">\n        <div id=\"buttonsOP\">\n          <button mat-raised-button color=\"accent\" (click)=\"submitTag()\">Submit Tag Corrections</button>\n          <button mat-raised-button color=\"accent\" disabled>Tag in Atlas</button>\n        </div>\n      </section>\n    </div>\n  </div>\n</div>\n"
+
+/***/ }),
+
+/***/ "../../../../../src/app/components/curate-corpus-correction/curate-corpus-correction.component.sass":
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, "", ""]);
+
+// exports
+
+
+/*** EXPORTS FROM exports-loader ***/
+module.exports = module.exports.toString();
+
+/***/ }),
+
+/***/ "../../../../../src/app/components/curate-corpus-correction/curate-corpus-correction.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CurateCorpusCorrectionComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_rxjs_add_operator_map__ = __webpack_require__("../../../../rxjs/add/operator/map.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_rxjs_add_operator_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_rxjs_add_operator_map__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__services_api_service__ = __webpack_require__("../../../../../src/app/services/api.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_forms__ = __webpack_require__("../../../forms/@angular/forms.es5.js");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+ //Handling Received Data
+
+
+var CurateCorpusCorrectionComponent = (function () {
+    function CurateCorpusCorrectionComponent(api) {
+        this.api = api;
+        this.title = 'Curate: Corpus Correction';
+    }
+    CurateCorpusCorrectionComponent.prototype.ngOnInit = function () {
+        this.corpusType = new __WEBPACK_IMPORTED_MODULE_3__angular_forms__["c" /* FormControl */]('', __WEBPACK_IMPORTED_MODULE_3__angular_forms__["l" /* Validators */].required);
+        this.correctionMode = new __WEBPACK_IMPORTED_MODULE_3__angular_forms__["c" /* FormControl */]('', __WEBPACK_IMPORTED_MODULE_3__angular_forms__["l" /* Validators */].required);
+        this.destination = new __WEBPACK_IMPORTED_MODULE_3__angular_forms__["c" /* FormControl */]('', __WEBPACK_IMPORTED_MODULE_3__angular_forms__["l" /* Validators */].required);
+        this.format = new __WEBPACK_IMPORTED_MODULE_3__angular_forms__["c" /* FormControl */]('', __WEBPACK_IMPORTED_MODULE_3__angular_forms__["l" /* Validators */].required);
+        this.corpusCorrection = new __WEBPACK_IMPORTED_MODULE_3__angular_forms__["c" /* FormControl */]('', __WEBPACK_IMPORTED_MODULE_3__angular_forms__["l" /* Validators */].required);
+        this.curateCorpusForm = new __WEBPACK_IMPORTED_MODULE_3__angular_forms__["d" /* FormGroup */]({
+            corpusType: this.corpusType,
+            correctionMode: this.correctionMode,
+            destination: this.destination,
+            format: this.format,
+            corpusCorrection: this.corpusCorrection
+        });
+    };
+    return CurateCorpusCorrectionComponent;
+}());
+CurateCorpusCorrectionComponent = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["o" /* Component */])({
+        selector: 'app-curate-corpus-correction',
+        template: __webpack_require__("../../../../../src/app/components/curate-corpus-correction/curate-corpus-correction.component.html"),
+        styles: [__webpack_require__("../../../../../src/app/components/curate-corpus-correction/curate-corpus-correction.component.sass")]
+    }),
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_2__services_api_service__["a" /* ApiService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__services_api_service__["a" /* ApiService */]) === "function" && _a || Object])
+], CurateCorpusCorrectionComponent);
+
+var _a;
+//# sourceMappingURL=curate-corpus-correction.component.js.map
 
 /***/ }),
 
@@ -1365,7 +1454,7 @@ OutputCurateComponent = __decorate([
 /***/ "../../../../../src/app/components/profiling/profiling.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"flex-container\">\n  <div class=\"container\">\n    <div class=\"row\">\n      <div class=\"col-md-12\">\n        <h2 class=\"title\">Data Profiling</h2>\n        <h5 class=\"subtitle\">Take advantage of on-demand profiling of any Datalake table or view for smart exploratory data analysis\n        </h5>\n        <health-check-non-prod></health-check-non-prod>\n      </div>\n    </div>\n\n\n    <form [formGroup]=\"profilingForm\" novalidate>\n      <div class=\"row\">\n        <div class=\"col-md-3\">\n          <mat-form-field class=\"block-margin\">\n            <mat-select placeholder=\"Select Environment\" autofocus formControlName=\"envName\">\n              <mat-option value=\"prodstage\" (click)=\"getDatabase('prodstage')\">Prod Stage</mat-option>\n              <mat-option value=\"prod\" (click)=\"getDatabase('prod')\">Prod</mat-option>\n              <mat-option value=\"nonprod\" (click)=\"getDatabase('nonprod')\">NP Integration</mat-option>\n            </mat-select>\n          </mat-form-field>\n        </div>\n        <div class=\"col-md-3\">\n          <mat-form-field class=\"block-margin\">\n            <mat-select placeholder=\"Select Database\" autofocus formControlName=\"dbName\">\n              <mat-option *ngFor=\"let db of databases\" [value]=\"db\">{{db}}</mat-option>\n              <!-- <mat-option value=\"otis\">otis</mat-option> -->\n            </mat-select>\n          </mat-form-field>\n        </div>\n        <div class=\"col-md-3\">\n          <mat-form-field class=\"block-margin\">\n            <mat-select placeholder=\"Select Category\" formControlName=\"categoryName\">\n              <mat-option value=\"tables\" (click)=\"getElements()\">Tables</mat-option>\n              <mat-option value=\"views\" (click)=\"getElements()\">Views</mat-option>\n            </mat-select>\n          </mat-form-field>\n        </div>\n        <div class=\"col-md-3\">\n          <mat-form-field class=\"block-margin\">\n            <mat-select placeholder=\"Select Element\" formControlName=\"elementName\">\n              <!-- <mat-option value=\"custinfo_cd_chgreas_t\">custinfo_cd_chgreas_t</mat-option> -->\n              <mat-option *ngFor=\"let el of elements\" [value]=\"el\">{{el}}</mat-option>\n            </mat-select>\n          </mat-form-field>\n        </div>\n      </div>\n\n      <!-- Button Row 1 -->\n      <div class=\"row\">\n        <div class=\"col-md-2\">\n\n        </div>\n        <div class=\"col-md-4\">\n          <button mat-raised-button color=\"accent\" style=\"float:right\" (click)=\"profileData()\">Profile Data</button>\n        </div>\n        <div class=\"col-md-4\">\n          <button mat-raised-button color=\"accent\" style=\"float:left\" disabled>Re-profile Data</button>\n        </div>\n        <div class=\"col-md-2\">\n\n        </div>\n      </div>\n      <div class=\"row\" *ngIf=\"showProfile\">\n        <div class=\"col-md-12\">\n          <iframe src=\"https://s3.amazonaws.com/lm-labrats/profile_custinfo_cd_chgreas_t.html\" class=\"iframe-class\"></iframe>\n        </div>\n      </div>\n\n\n\n    </form>\n  </div>\n</div>\n"
+module.exports = "<div class=\"flex-container\">\n  <div class=\"container\">\n    <div class=\"row\">\n      <div class=\"col-md-12\">\n        <h2 class=\"title\">Data Profiling</h2>\n        <h5 class=\"subtitle\">Take advantage of on-demand profiling of any Datalake table or view for smart exploratory data analysis\n        </h5>\n        <health-check-non-prod></health-check-non-prod>\n      </div>\n    </div>\n\n\n    <form [formGroup]=\"profilingForm\" novalidate>\n      <div class=\"row\">\n        <div class=\"col-md-3\">\n          <mat-form-field class=\"block-margin\">\n            <mat-select placeholder=\"Select Environment\" autofocus formControlName=\"envName\">\n              <mat-option value=\"prodstage\" (click)=\"getDatabase('prodstage')\">Prod Stage</mat-option>\n              <mat-option value=\"prod\" (click)=\"getDatabase('prod')\">Prod</mat-option>\n              <mat-option value=\"nonprod\" (click)=\"getDatabase('nonprod')\">NP Integration</mat-option>\n            </mat-select>\n          </mat-form-field>\n        </div>\n        <div class=\"col-md-3\">\n          <mat-form-field class=\"block-margin\">\n            <mat-select placeholder=\"Select Database\" autofocus formControlName=\"dbName\">\n              <mat-option *ngFor=\"let db of databases\" [value]=\"db\">{{db}}</mat-option>\n              <!-- <mat-option value=\"otis\">otis</mat-option> -->\n            </mat-select>\n          </mat-form-field>\n        </div>\n        <div class=\"col-md-3\">\n          <mat-form-field class=\"block-margin\">\n            <mat-select placeholder=\"Select Category\" formControlName=\"categoryName\">\n              <mat-option value=\"tables\" (click)=\"getElements()\">Tables</mat-option>\n              <mat-option value=\"views\" (click)=\"getElements()\">Views</mat-option>\n            </mat-select>\n          </mat-form-field>\n        </div>\n        <div class=\"col-md-3\">\n          <mat-form-field class=\"block-margin\">\n            <mat-select placeholder=\"Select Element\" formControlName=\"elementName\">\n              <!-- <mat-option value=\"custinfo_cd_chgreas_t\">custinfo_cd_chgreas_t</mat-option> -->\n              <mat-option *ngFor=\"let el of elements\" [value]=\"el\">{{el}}</mat-option>\n            </mat-select>\n          </mat-form-field>\n        </div>\n      </div>\n\n      <!-- Button Row 1 -->\n      <div class=\"row\">\n        <div class=\"col-md-2\">\n\n        </div>\n        <div class=\"col-md-4\">\n          <button mat-raised-button color=\"accent\" style=\"float:right\" (click)=\"profileData()\">Profile Data</button>\n        </div>\n        <div class=\"col-md-4\">\n          <button mat-raised-button color=\"accent\" style=\"float:left\" disabled>Re-profile Data</button>\n        </div>\n        <div class=\"col-md-2\">\n\n        </div>\n      </div>\n      <div class=\"row\" *ngIf=\"showProfile\">\n        <div class=\"col-md-12\">\n          <iframe src=\"http://ip-10-224-69-47.aws.lmig.com/profile/profile_nonprod-lmb_dl_otis_raw-custinfo_cd_chgreas_t_dltbl-tables.html\" class=\"iframe-class\"></iframe>\n        </div>\n      </div>\n\n\n\n    </form>\n  </div>\n</div>\n"
 
 /***/ }),
 
